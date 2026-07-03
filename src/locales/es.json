@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "title": "Desarrollador Full Stack",
+    "description": "Construyo experiencias digitales con tecnologías de vanguardia. Especializado en Vue.js, TypeScript y arquitecturas escalables.",
+    "cta_projects": "Ver Proyectos",
+    "cta_contact": "Contactar",
+    "available": "Disponible para trabajar",
+    "scroll": "SCROLL"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "subtitle": "Conoce al desarrollador detrás del código",
+    "story_short": "Mi Historia",
+    "story": "Desarrollador con más de 3 años de experiencia creando aplicaciones web modernas y escalables. Mi pasión por la tecnología me lleva a estar constantemente actualizado con las últimas tendencias del desarrollo. Especializado en ecosistemas JavaScript, arquitecturas cloud y metodologías ágiles.",
+    "years": "Años",
+    "projects": "Proyectos",
+    "clients": "Clientes",
+    "stack": "Stack Principal",
+    "methodology": "Metodología",
+    "methodologies": {
+      "results": {
+        "title": "Enfoque en Resultados",
+        "description": "Optimizo cada línea de código para máximo rendimiento"
+      },
+      "agile": {
+        "title": "Metodología Ágil",
+        "description": "Scrum y desarrollo iterativo para entregas rápidas"
+      },
+      "mobile": {
+        "title": "Mobile First",
+        "description": "Experiencias optimizadas para todos los dispositivos"
+      }
+    }
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "subtitle": "Trayectoria y proyectos destacados",
+    "items": [
+      {
+        "company": "TechCorp Inc.",
+        "position": "Senior Frontend Developer",
+        "period": "2023 - Presente",
+        "description": "Liderando el desarrollo de aplicaciones Vue.js de misión crítica para clientes enterprise. Implementación de micro-frontends, optimización de rendimiento y mentoría de desarrolladores junior.",
+        "technologies": ["Vue 3", "TypeScript", "Tailwind", "Pinia", "Vitest"]
+      },
+      {
+        "company": "StartupX",
+        "position": "Full Stack Developer",
+        "period": "2021 - 2023",
+        "description": "Desarrollo full stack con Node.js y React para plataforma de análisis de datos en tiempo real. Arquitectura de microservicios, migración a la nube (AWS) y WebSockets.",
+        "technologies": ["React", "Node.js", "MongoDB", "Docker", "AWS"]
+      },
+      {
+        "company": "Freelance",
+        "position": "Web Developer",
+        "period": "2020 - 2021",
+        "description": "Desarrollo de proyectos web para diversos clientes, desde landing pages hasta aplicaciones completas. Enfoque en experiencia de usuario y diseño responsive.",
+        "technologies": ["Vue 2", "Firebase", "WordPress", "SCSS", "jQuery"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Trabajos que demuestran mi capacidad técnica",
+    "view": "Ver proyecto",
+    "items": [
+      {
+        "title": "Trello Clone - Gestión de Proyectos",
+        "description": "Aplicación completa de gestión de tareas con tableros, listas y tarjetas estilo Trello. Permite arrastrar elementos, asignar etiquetas y colaborar en tiempo real.",
+        "problem": "Los equipos necesitan una herramienta visual y colaborativa para organizar proyectos sin depender de soluciones pagas complejas.",
+        "role": "Desarrollador Full Stack - Diseñé la arquitectura, implementé autenticación JWT y desarrollé la interfaz drag & drop.",
+        "technologies": ["Vue 3", "Pinia", "Node.js", "PostgreSQL", "Socket.io", "Tailwind"],
+        "metrics": "Reduje el tiempo de organización de tareas en un 60% para equipos de hasta 10 personas.",
+        "demo": "#",
+        "github": "#",
+        "featured": true,
+        "year": "2024"
+      },
+      {
+        "title": "Analytics Dashboard - Tiempo Real",
+        "description": "Panel de control interactivo para visualización de métricas de negocio en tiempo real con gráficos dinámicos y filtros avanzados.",
+        "problem": "Las empresas necesitan visualizar sus datos de forma inmediata y tomar decisiones basadas en información actualizada.",
+        "role": "Frontend Developer - Implementé visualizaciones con D3.js, conexión WebSocket y optimización de rendimiento.",
+        "technologies": ["React", "D3.js", "WebSocket", "Firebase", "Tailwind"],
+        "metrics": "Procesamiento de 10,000 eventos por segundo con latencia < 100ms.",
+        "demo": "#",
+        "github": "#",
+        "featured": true,
+        "year": "2023"
+      },
+      {
+        "title": "API REST Documentada - Sistema de Facturación",
+        "description": "API RESTful para gestión de facturación con autenticación, roles de usuario y documentación interactiva con Swagger.",
+        "problem": "Las pequeñas empresas necesitan una API segura y bien documentada para integrar sus sistemas de facturación.",
+        "role": "Backend Developer - Diseñé la arquitectura, implementé autenticación JWT, roles y documentación OpenAPI.",
+        "technologies": ["Node.js", "Express", "MongoDB", "JWT", "Swagger", "Jest"],
+        "metrics": "API con 99.9% de disponibilidad y pruebas unitarias con 95% de cobertura.",
+        "demo": "#",
+        "github": "#",
+        "featured": true,
+        "year": "2024"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "subtitle": "Tecnologías que domino y uso diariamente",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Herramientas",
+      "mobile": "Móvil & Otros"
+    }
+  },
+  "contact": {
+    "title": "¿Tienes un proyecto?",
+    "subtitle": "Trabajemos juntos para crear algo increíble",
+    "direct": "Contacto Directo",
+    "follow": "Sígueme en",
+    "send": "Envíame un mensaje",
+    "choose": "Elige cómo prefieres contactarme",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "name": "Nombre",
+    "email_label": "Email",
+    "message": "Mensaje",
+    "send_email": "Enviar por Email",
+    "open_whatsapp": "Abrir WhatsApp",
+    "back_to_email": "Volver al email →",
+    "prefer_whatsapp": "¿Prefieres WhatsApp?",
+    "whatsapp_description": "Haz clic en el botón para abrir WhatsApp y enviarme un mensaje directamente",
+    "number": "Número: +53 54556198",
+    "success": "¡Mensaje enviado con éxito! Te contactaré pronto.",
+    "labels": {
+      "email": "Email",
+      "phone": "Teléfono",
+      "location": "Ubicación",
+      "availability": "Disponibilidad"
+    },
+    "values": {
+      "email": "luisprogramming2@gmail.com",
+      "phone": "+53 54556198",
+      "location": "Matanzas, Cuba",
+      "availability": "Lun - Vie 9:00 - 18:00"
+    }
+  },
+  "footer": {
+    "built": "Construido con",
+    "and": "+"
+  },
+  "theme": {
+    "light": "Modo Claro",
+    "dark": "Modo Oscuro"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "title": "Full Stack Developer",
+    "description": "I build digital experiences with cutting-edge technologies. Specialized in Vue.js, TypeScript and scalable architectures.",
+    "cta_projects": "View Projects",
+    "cta_contact": "Contact",
+    "available": "Available for work",
+    "scroll": "SCROLL"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Meet the developer behind the code",
+    "story_short": "My Story",
+    "story": "Developer with more than 3 years of experience creating modern and scalable web applications. My passion for technology keeps me constantly updated with the latest development trends. Specialized in JavaScript ecosystems, cloud architectures and agile methodologies.",
+    "years": "Years",
+    "projects": "Projects",
+    "clients": "Clients",
+    "stack": "Main Stack",
+    "methodology": "Methodology",
+    "methodologies": {
+      "results": {
+        "title": "Results Focused",
+        "description": "I optimize every line of code for maximum performance"
+      },
+      "agile": {
+        "title": "Agile Methodology",
+        "description": "Scrum and iterative development for fast deliveries"
+      },
+      "mobile": {
+        "title": "Mobile First",
+        "description": "Optimized experiences for all devices"
+      }
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "Career path and highlighted projects",
+    "items": [
+      {
+        "company": "TechCorp Inc.",
+        "position": "Senior Frontend Developer",
+        "period": "2023 - Present",
+        "description": "Leading the development of mission-critical Vue.js applications for enterprise clients. Implementing micro-frontends, performance optimization and mentoring junior developers.",
+        "technologies": ["Vue 3", "TypeScript", "Tailwind", "Pinia", "Vitest"]
+      },
+      {
+        "company": "StartupX",
+        "position": "Full Stack Developer",
+        "period": "2021 - 2023",
+        "description": "Full stack development with Node.js and React for real-time data analytics platform. Microservices architecture, cloud migration (AWS) and WebSockets.",
+        "technologies": ["React", "Node.js", "MongoDB", "Docker", "AWS"]
+      },
+      {
+        "company": "Freelance",
+        "position": "Web Developer",
+        "period": "2020 - 2021",
+        "description": "Web project development for various clients, from landing pages to complete applications. Focus on user experience and responsive design.",
+        "technologies": ["Vue 2", "Firebase", "WordPress", "SCSS", "jQuery"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Projects that demonstrate my technical skills",
+    "view": "View project",
+    "items": [
+      {
+        "title": "Trello Clone - Project Management",
+        "description": "Complete task management application with boards, lists and cards like Trello. Drag & drop, labels and real-time collaboration.",
+        "problem": "Teams need a visual and collaborative tool to organize projects without relying on complex paid solutions.",
+        "role": "Full Stack Developer - Designed architecture, implemented JWT authentication and drag & drop interface.",
+        "technologies": ["Vue 3", "Pinia", "Node.js", "PostgreSQL", "Socket.io", "Tailwind"],
+        "metrics": "Reduced task organization time by 60% for teams of up to 10 people.",
+        "demo": "#",
+        "github": "#",
+        "featured": true,
+        "year": "2024"
+      },
+      {
+        "title": "Analytics Dashboard - Real Time",
+        "description": "Interactive control panel for real-time business metrics visualization with dynamic charts and advanced filters.",
+        "problem": "Companies need to visualize their data immediately and make decisions based on updated information.",
+        "role": "Frontend Developer - Implemented visualizations with D3.js, WebSocket connection and performance optimization.",
+        "technologies": ["React", "D3.js", "WebSocket", "Firebase", "Tailwind"],
+        "metrics": "Processing 10,000 events per second with latency < 100ms.",
+        "demo": "#",
+        "github": "#",
+        "featured": true,
+        "year": "2023"
+      },
+      {
+        "title": "REST API Documented - Billing System",
+        "description": "RESTful API for billing management with authentication, user roles and interactive Swagger documentation.",
+        "problem": "Small businesses need a secure and well-documented API to integrate their billing systems.",
+        "role": "Backend Developer - Designed architecture, implemented JWT authentication, roles and OpenAPI documentation.",
+        "technologies": ["Node.js", "Express", "MongoDB", "JWT", "Swagger", "Jest"],
+        "metrics": "API with 99.9% availability and unit tests with 95% coverage.",
+        "demo": "#",
+        "github": "#",
+        "featured": true,
+        "year": "2024"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "Technologies I master and use daily",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools",
+      "mobile": "Mobile & Others"
+    }
+  },
+  "contact": {
+    "title": "Have a project?",
+    "subtitle": "Let's work together to create something amazing",
+    "direct": "Direct Contact",
+    "follow": "Follow me",
+    "send": "Send me a message",
+    "choose": "Choose how you prefer to contact me",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "name": "Name",
+    "email_label": "Email",
+    "message": "Message",
+    "send_email": "Send by Email",
+    "open_whatsapp": "Open WhatsApp",
+    "back_to_email": "Back to email →",
+    "prefer_whatsapp": "Prefer WhatsApp?",
+    "whatsapp_description": "Click the button to open WhatsApp and send me a message directly",
+    "number": "Number: +53 54556198",
+    "success": "Message sent successfully! I'll contact you soon.",
+    "labels": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "availability": "Availability"
+    },
+    "values": {
+      "email": "luisprogramming2@gmail.com",
+      "phone": "+53 54556198",
+      "location": "Matanzas, Cuba",
+      "availability": "Mon - Fri 9:00 - 18:00"
+    }
+  },
+  "footer": {
+    "built": "Built with",
+    "and": "+"
+  },
+  "theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode"
+  }
+}
