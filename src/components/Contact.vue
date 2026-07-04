@@ -1,224 +1,53 @@
 <template>
-  <section id="contacto" class="py-24 relative">
-    <div class="container-custom">
-      <h2 class="section-title">{{ t('contact.title') }}</h2>
-      <p class="section-subtitle">{{ t('contact.subtitle') }}</p>
+  <!-- ===== SECCIÓN DE CONTACTO - VERSIÓN MÍNIMA ===== -->
+  <section id="contacto" style="padding: 80px 20px; background: #0A0A1A; border-top: 4px solid #00D4FF;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      
+      <!-- TÍTULO -->
+      <h1 style="font-size: 48px; font-weight: 900; background: linear-gradient(135deg, #00D4FF, #7B61FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px;">
+        📞 CONTACTO
+      </h1>
+      
+      <p style="font-size: 20px; color: #94A3B8; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        ¿Tienes un proyecto? Hablemos.
+      </p>
 
-      <div class="grid lg:grid-cols-2 gap-12">
-        <!-- ===== INFORMACIÓN DE CONTACTO ===== -->
-        <div class="space-y-6">
-          <div class="glass-card p-8 hover:shadow-card-hover transition-all duration-500">
-            <h3 class="text-2xl font-display font-bold text-gradient mb-6 flex items-center gap-3">
-              <font-awesome-icon icon="envelope" class="text-primary" />
-              {{ t('contact.direct') }}
-            </h3>
-            
-            <div class="space-y-4">
-              <div v-for="(contact, index) in contacts" :key="index"
-                   class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50/50 transition-all group
-                          dark:hover:bg-glass hover:scale-[1.02] duration-300">
-                <font-awesome-icon :icon="contact.icon" class="text-2xl text-primary" />
-                <div>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">{{ t(`contact.labels.${contact.key}`) }}</p>
-                  <p class="text-gray-800 dark:text-gray-200 font-medium group-hover:text-primary transition-colors">
-                    {{ t(`contact.values.${contact.key}`) }}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-6 pt-6 border-t border-gray-200 dark:border-glass-border">
-              <p class="text-sm text-gray-500 dark:text-gray-400 mb-3 flex items-center gap-2">
-                <font-awesome-icon icon="users" class="text-primary" />
-                {{ t('contact.follow') }}
-              </p>
-              <div class="flex gap-4">
-                <a v-for="social in socials" :key="social.name"
-                   :href="social.link" target="_blank"
-                   class="p-3 bg-gray-100/50 hover:bg-gray-200/50 rounded-lg transition-all hover:shadow-md hover:scale-110 duration-300
-                          dark:glass-card dark:hover:border-primary">
-                  <font-awesome-icon :icon="['fab', social.icon]" class="text-xl text-gray-600 dark:text-gray-400" />
-                </a>
-              </div>
-            </div>
-          </div>
+      <!-- TARJETA DE CONTACTO -->
+      <div style="max-width: 400px; margin: 0 auto; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 30px;">
+        
+        <!-- Email -->
+        <div style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+          <span style="font-size: 24px;">📧</span>
+          <span style="color: #E2E8F0; font-size: 16px;">luisprogramming2@gmail.com</span>
         </div>
 
-        <!-- ===== FORMULARIO ===== -->
-        <div class="glass-card p-8 hover:shadow-card-hover transition-all duration-500">
-          <div class="mb-6">
-            <h3 class="text-xl font-display font-bold text-gradient mb-2 flex items-center gap-2">
-              <font-awesome-icon icon="paper-plane" class="text-primary" />
-              {{ t('contact.send') }}
-            </h3>
-            <p class="text-sm text-gray-500 dark:text-gray-400">{{ t('contact.choose') }}</p>
-          </div>
-
-          <!-- Selector de método -->
-          <div class="flex gap-3 mb-6">
-            <button @click="contactMethod = 'email'" 
-                    :class="[
-                      'flex-1 px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2',
-                      contactMethod === 'email' 
-                        ? 'bg-primary text-white shadow-neon' 
-                        : 'bg-gray-100/50 text-gray-600 hover:bg-gray-200/50 dark:glass-card dark:text-gray-400 dark:hover:border-primary'
-                    ]">
-              <font-awesome-icon icon="envelope" />
-              {{ t('contact.email') }}
-            </button>
-            <button @click="contactMethod = 'whatsapp'" 
-                    :class="[
-                      'flex-1 px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2',
-                      contactMethod === 'whatsapp' 
-                        ? 'bg-[#25D366] text-white shadow-lg' 
-                        : 'bg-gray-100/50 text-gray-600 hover:bg-gray-200/50 dark:glass-card dark:text-gray-400 dark:hover:border-[#25D366]'
-                    ]">
-              <font-awesome-icon :icon="['fab', 'whatsapp']" />
-              {{ t('contact.whatsapp') }}
-            </button>
-          </div>
-
-          <!-- ===== FORMULARIO EMAIL ===== -->
-          <form v-if="contactMethod === 'email'" @submit.prevent="handleEmailSubmit" class="space-y-5">
-            <div>
-              <label class="block text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">
-                <font-awesome-icon icon="user" class="mr-1 text-primary" />
-                {{ t('contact.name') }}
-              </label>
-              <input 
-                type="text" 
-                v-model="emailForm.name" 
-                :placeholder="t('contact.name')" 
-                required
-                class="w-full px-4 py-3 bg-white/50 border border-gray-200 rounded-lg text-gray-800 
-                       focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all
-                       dark:bg-dark-400/50 dark:border-glass-border dark:text-gray-200"
-              >
-            </div>
-
-            <div>
-              <label class="block text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">
-                <font-awesome-icon icon="envelope" class="mr-1 text-primary" />
-                {{ t('contact.email_label') }}
-              </label>
-              <input 
-                type="email" 
-                v-model="emailForm.email" 
-                placeholder="tu@email.com" 
-                required
-                class="w-full px-4 py-3 bg-white/50 border border-gray-200 rounded-lg text-gray-800 
-                       focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all
-                       dark:bg-dark-400/50 dark:border-glass-border dark:text-gray-200"
-              >
-            </div>
-
-            <div>
-              <label class="block text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">
-                <font-awesome-icon icon="comment" class="mr-1 text-primary" />
-                {{ t('contact.message') }}
-              </label>
-              <textarea 
-                v-model="emailForm.message" 
-                :placeholder="t('contact.message')" 
-                required 
-                rows="4"
-                class="w-full px-4 py-3 bg-white/50 border border-gray-200 rounded-lg text-gray-800 
-                       focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none
-                       dark:bg-dark-400/50 dark:border-glass-border dark:text-gray-200"
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn-primary w-full group">
-              <font-awesome-icon icon="paper-plane" class="mr-2" />
-              {{ t('contact.send_email') }}
-              <font-awesome-icon icon="arrow-right" class="ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </form>
-
-          <!-- ===== WHATSAPP ===== -->
-          <div v-else class="space-y-6">
-            <div class="bg-[#25D366]/5 border border-[#25D366]/20 rounded-lg p-8 text-center
-                        dark:bg-[#25D366]/10 hover:border-[#25D366]/40 transition-all duration-300">
-              <font-awesome-icon :icon="['fab', 'whatsapp']" class="text-7xl text-[#25D366] mb-4 animate-pulse" />
-              <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">{{ t('contact.prefer_whatsapp') }}</h4>
-              <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
-                {{ t('contact.whatsapp_description') }}
-              </p>
-              <a :href="whatsappLink" target="_blank" class="btn-whatsapp inline-block group">
-                <font-awesome-icon :icon="['fab', 'whatsapp']" class="mr-2" />
-                {{ t('contact.open_whatsapp') }}
-                <font-awesome-icon icon="arrow-right" class="ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <p class="text-xs text-gray-500 dark:text-gray-500 mt-4">
-                📱 {{ t('contact.number') }}
-              </p>
-            </div>
-
-            <div class="text-center text-gray-500 dark:text-gray-400 text-sm">
-              <p>O si prefieres, también puedes enviarme un email</p>
-              <button @click="contactMethod = 'email'" class="text-primary hover:underline mt-1 font-medium flex items-center justify-center gap-1 mx-auto">
-                {{ t('contact.back_to_email') }}
-                <font-awesome-icon icon="arrow-right" class="text-xs" />
-              </button>
-            </div>
-          </div>
+        <!-- Teléfono -->
+        <div style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+          <span style="font-size: 24px;">📱</span>
+          <span style="color: #E2E8F0; font-size: 16px;">+53 54556198</span>
         </div>
+
+        <!-- Ubicación -->
+        <div style="display: flex; align-items: center; gap: 12px; padding: 12px 0;">
+          <span style="font-size: 24px;">📍</span>
+          <span style="color: #E2E8F0; font-size: 16px;">Matanzas, Cuba</span>
+        </div>
+
+        <!-- Botón WhatsApp -->
+        <a href="https://wa.me/5354556198" target="_blank" 
+           style="display: inline-block; margin-top: 20px; padding: 14px 40px; background: #25D366; color: white; font-weight: 600; border-radius: 12px; text-decoration: none; transition: all 0.3s;">
+          💬 Enviar WhatsApp
+        </a>
       </div>
+
+      <!-- 🔥 TEXTO DE CONFIRMACIÓN -->
+      <p style="margin-top: 30px; color: #00D4FF; font-size: 14px; font-weight: 600;">
+        ✅ Contacto cargado correctamente
+      </p>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
-
-// ===== ESTADO =====
-const contactMethod = ref('email')
-
-const emailForm = ref({
-  name: '',
-  email: '',
-  message: ''
-})
-
-// ===== WHATSAPP =====
-const whatsappNumber = '+5354556198'
-const whatsappLink = computed(() => {
-  const message = 'Hola! Vi tu portfolio y me gustaría hablar contigo sobre un proyecto.'
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
-})
-
-// ===== DATOS DE CONTACTO =====
-const contacts = [
-  { icon: 'envelope', key: 'email' },
-  { icon: 'phone', key: 'phone' },
-  { icon: 'location-dot', key: 'location' },
-  { icon: 'clock', key: 'availability' },
-]
-
-// ===== REDES SOCIALES =====
-const socials = [
-  { name: 'Twitter', icon: 'twitter', link: 'https://twitter.com/tuusuario' },
-  { name: 'LinkedIn', icon: 'linkedin', link: 'https://linkedin.com/in/tuusuario' },
-  { name: 'GitHub', icon: 'github', link: 'https://github.com/tuusuario' },
-  { name: 'YouTube', icon: 'youtube', link: 'https://youtube.com/@tuusuario' },
-]
-
-// ===== ENVIAR EMAIL =====
-const handleEmailSubmit = () => {
-  alert(t('contact.success'))
-  
-  // Resetear formulario
-  emailForm.value = {
-    name: '',
-    email: '',
-    message: ''
-  }
-}
+console.log('🔥 Contact component loaded successfully!')
 </script>
-
-<style scoped>
-/* Estilos adicionales si son necesarios */
-</style>
