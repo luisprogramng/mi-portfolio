@@ -145,6 +145,9 @@
       </div>
     </div>
   </section>
+  <div style="background: red; color: white; padding: 20px; text-align: center; font-size: 24px;">
+    🔥 CONTACT COMPONENTE CARGADO 🔥
+  </div>
 </template>
 
 <script setup>
