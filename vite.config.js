@@ -8,7 +8,8 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
-    minify: 'terser',
+    // Usar esbuild en lugar de terser (más rápido y no necesita dependencias extra)
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -21,19 +22,12 @@ export default defineConfig({
             }
             return 'vendor'
           }
-        },
-        entryFileNames: 'assets/[name]-[hash].js',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]'
+        }
       }
     }
   },
   server: {
     port: 5173,
-    open: true
-  },
-  preview: {
-    port: 4173,
     open: true
   }
 })
