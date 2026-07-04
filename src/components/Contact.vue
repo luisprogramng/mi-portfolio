@@ -44,105 +44,42 @@
           </div>
         </div>
 
-        <!-- ===== FORMULARIO Y BOTONES ===== -->
+        <!-- ===== WHATSAPP ===== -->
         <div class="glass-card p-8 hover:shadow-card-hover transition-all duration-500">
-          <div class="mb-6">
-            <h3 class="text-xl font-display font-bold text-gradient mb-2 flex items-center gap-2">
-              <font-awesome-icon icon="paper-plane" class="text-primary" />
-              {{ t('contact.send') }}
-            </h3>
-            <p class="text-sm text-gray-500 dark:text-gray-400">Elige cómo quieres contactarme</p>
-          </div>
+          <div class="text-center">
+            <div class="flex justify-center mb-4">
+              <div class="w-24 h-24 rounded-full bg-[#25D366]/10 flex items-center justify-center border-2 border-[#25D366]/20">
+                <font-awesome-icon :icon="['fab', 'whatsapp']" class="text-6xl text-[#25D366]" />
+              </div>
+            </div>
 
-          <!-- ===== BOTONES DE ACCIÓN ===== -->
-          <div class="flex flex-col sm:flex-row gap-4 mb-8">
-            <!-- Botón Email -->
-            <button @click="openEmail" 
-                    class="flex-1 px-6 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-medium 
-                           transition-all duration-300 hover:shadow-neon hover:scale-105 flex items-center justify-center gap-3">
-              <font-awesome-icon icon="envelope" class="text-xl" />
-              <span>Enviar Email</span>
-              <font-awesome-icon icon="arrow-right" class="group-hover:translate-x-1 transition-transform" />
-            </button>
+            <h3 class="text-2xl font-display font-bold text-gradient mb-2">
+              {{ t('contact.prefer_whatsapp') }}
+            </h3>
+
+            <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+              {{ t('contact.whatsapp_description') }}
+            </p>
+
+            <!-- Número de WhatsApp -->
+            <div class="bg-gray-50/50 dark:bg-glass rounded-lg p-4 mb-6 border border-gray-200 dark:border-glass-border">
+              <p class="text-sm text-gray-500 dark:text-gray-400">📱 {{ t('contact.number') }}</p>
+              <p class="text-xl font-bold text-[#25D366]">+53 54556198</p>
+            </div>
 
             <!-- Botón WhatsApp -->
             <a :href="whatsappLink" target="_blank" 
-               class="flex-1 px-6 py-4 bg-[#25D366] text-white rounded-lg font-medium 
-                      transition-all duration-300 hover:shadow-lg hover:scale-105 flex items-center justify-center gap-3">
-              <font-awesome-icon :icon="['fab', 'whatsapp']" class="text-xl" />
-              <span>WhatsApp</span>
+               class="btn-whatsapp w-full group inline-flex items-center justify-center gap-3">
+              <font-awesome-icon :icon="['fab', 'whatsapp']" class="text-2xl" />
+              <span>{{ t('contact.open_whatsapp') }}</span>
               <font-awesome-icon icon="arrow-right" class="group-hover:translate-x-1 transition-transform" />
             </a>
-          </div>
 
-          <!-- ===== FORMULARIO EMAIL ===== -->
-          <form @submit.prevent="handleEmailSubmit" class="space-y-5">
-            <div>
-              <label class="block text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">
-                <font-awesome-icon icon="user" class="mr-1 text-primary" />
-                {{ t('contact.name') }}
-              </label>
-              <input 
-                type="text" 
-                v-model="emailForm.name" 
-                :placeholder="t('contact.name')" 
-                required
-                class="w-full px-4 py-3 bg-white/50 border border-gray-200 rounded-lg text-gray-800 
-                       focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all
-                       dark:bg-dark-400/50 dark:border-glass-border dark:text-gray-200"
-              >
+            <!-- Disponibilidad -->
+            <div class="mt-4 flex items-center justify-center gap-2 text-sm text-gray-400">
+              <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              <span>Disponible para responder en minutos</span>
             </div>
-
-            <div>
-              <label class="block text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">
-                <font-awesome-icon icon="envelope" class="mr-1 text-primary" />
-                {{ t('contact.email_label') }}
-              </label>
-              <input 
-                type="email" 
-                v-model="emailForm.email" 
-                placeholder="tu@email.com" 
-                required
-                class="w-full px-4 py-3 bg-white/50 border border-gray-200 rounded-lg text-gray-800 
-                       focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all
-                       dark:bg-dark-400/50 dark:border-glass-border dark:text-gray-200"
-              >
-            </div>
-
-            <div>
-              <label class="block text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">
-                <font-awesome-icon icon="comment" class="mr-1 text-primary" />
-                {{ t('contact.message') }}
-              </label>
-              <textarea 
-                v-model="emailForm.message" 
-                :placeholder="t('contact.message')" 
-                required 
-                rows="4"
-                class="w-full px-4 py-3 bg-white/50 border border-gray-200 rounded-lg text-gray-800 
-                       focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none
-                       dark:bg-dark-400/50 dark:border-glass-border dark:text-gray-200"
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn-primary w-full group">
-              <font-awesome-icon icon="paper-plane" class="mr-2" />
-              {{ t('contact.send_email') }}
-              <font-awesome-icon icon="arrow-right" class="ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </form>
-
-          <!-- ===== WHATSAPP DIRECTO ===== -->
-          <div class="mt-6 pt-6 border-t border-gray-200 dark:border-glass-border text-center">
-            <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">
-              <font-awesome-icon icon="clock" class="text-primary mr-1" />
-              Disponible para responder en menos de 24 horas
-            </p>
-            <a :href="whatsappLink" target="_blank" 
-               class="inline-flex items-center gap-2 text-[#25D366] hover:text-[#1da851] transition-colors font-medium">
-              <font-awesome-icon :icon="['fab', 'whatsapp']" class="text-2xl" />
-              <span>+53 54556198</span>
-            </a>
           </div>
         </div>
       </div>
@@ -151,17 +88,10 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
-
-// ===== ESTADO =====
-const emailForm = ref({
-  name: '',
-  email: '',
-  message: ''
-})
 
 // ===== WHATSAPP =====
 const whatsappNumber = '+5354556198'
@@ -185,35 +115,6 @@ const socials = [
   { name: 'GitHub', icon: 'github', link: 'https://github.com/tuusuario' },
   { name: 'YouTube', icon: 'youtube', link: 'https://youtube.com/@tuusuario' },
 ]
-
-// ===== ABRIR EMAIL =====
-const openEmail = () => {
-  const { name, email, message } = emailForm.value
-  if (!name || !email || !message) {
-    alert('Por favor, completa todos los campos del formulario primero.')
-    return
-  }
-  
-  const subject = encodeURIComponent('Contacto desde tu portfolio')
-  const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`)
-  window.location.href = `mailto:luisprogramming2@gmail.com?subject=${subject}&body=${body}`
-}
-
-// ===== ENVIAR EMAIL =====
-const handleEmailSubmit = () => {
-  // Abrir el cliente de email con los datos del formulario
-  openEmail()
-  
-  // Mostrar mensaje de éxito
-  alert('📧 ¡Tu mensaje está listo para enviar! Se abrirá tu cliente de correo.')
-  
-  // Resetear formulario
-  emailForm.value = {
-    name: '',
-    email: '',
-    message: ''
-  }
-}
 </script>
 
 <style scoped>
