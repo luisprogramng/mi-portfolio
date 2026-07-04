@@ -102,6 +102,18 @@
         "title": "Blockchain Explorer",
         "description": "Explorador de blockchain con visualización de transacciones y contratos.",
         "technologies": ["Web3.js", "React", "Node.js", "Tailwind"]
+      },
+      {
+        "title": "FastShip - Plataforma de Envíos",
+        "description": "Plataforma completa para gestión de envíos con seguimiento en tiempo real. Incluye panel de administración, notificaciones y sistema de tracking.",
+        "problem": "Las empresas necesitan una solución eficiente para gestionar envíos y ofrecer seguimiento en tiempo real a sus clientes.",
+        "role": "Full Stack Developer - Diseñé la arquitectura, implementé el sistema de tracking en tiempo real con Socket.io y el panel administrativo.",
+        "technologies": ["React", "Node.js", "MongoDB", "Tailwind", "Socket.io", "JWT"],
+        "metrics": "Procesamiento de 500+ envíos diarios con actualizaciones en tiempo real.",
+        "demo": "https://fastship-sandy.vercel.app",
+        "github": "#",
+        "featured": true,
+        "year": "2024"
       }
     ]
   },
@@ -121,19 +133,14 @@
     "direct": "Contacto Directo",
     "follow": "Sígueme en",
     "send": "Envíame un mensaje",
-    "choose": "Elige cómo prefieres contactarme",
     "email": "Email",
     "whatsapp": "WhatsApp",
-    "name": "Nombre",
-    "email_label": "Email",
-    "message": "Mensaje",
-    "send_email": "Enviar por Email",
+    "send_email": "Enviar Email",
     "open_whatsapp": "Abrir WhatsApp",
-    "back_to_email": "Volver al email →",
     "prefer_whatsapp": "¿Prefieres WhatsApp?",
-    "whatsapp_description": "Haz clic en el botón para abrir WhatsApp y enviarme un mensaje directamente",
+    "whatsapp_description": "Haz clic para abrir WhatsApp",
     "number": "Número: +53 54556198",
-    "success": "¡Mensaje enviado con éxito! Te contactaré pronto.",
+    "success": "¡Mensaje enviado!",
     "labels": {
       "email": "Email",
       "phone": "Teléfono",
