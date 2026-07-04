@@ -74,40 +74,34 @@
     "view": "View project",
     "items": [
       {
-        "title": "Trello Clone - Project Management",
-        "description": "Complete task management application with boards, lists and cards like Trello. Drag & drop, labels and real-time collaboration.",
-        "problem": "Teams need a visual and collaborative tool to organize projects without relying on complex paid solutions.",
-        "role": "Full Stack Developer - Designed architecture, implemented JWT authentication and drag & drop interface.",
-        "technologies": ["Vue 3", "Pinia", "Node.js", "PostgreSQL", "Socket.io", "Tailwind"],
-        "metrics": "Reduced task organization time by 60% for teams of up to 10 people.",
-        "demo": "#",
-        "github": "#",
-        "featured": true,
-        "year": "2024"
+        "title": "E-commerce Platform",
+        "description": "E-commerce platform with inventory management and integrated payments.",
+        "technologies": ["Vue 3", "Pinia", "Stripe", "Tailwind"]
       },
       {
-        "title": "Analytics Dashboard - Real Time",
-        "description": "Interactive control panel for real-time business metrics visualization with dynamic charts and advanced filters.",
-        "problem": "Companies need to visualize their data immediately and make decisions based on updated information.",
-        "role": "Frontend Developer - Implemented visualizations with D3.js, WebSocket connection and performance optimization.",
-        "technologies": ["React", "D3.js", "WebSocket", "Firebase", "Tailwind"],
-        "metrics": "Processing 10,000 events per second with latency < 100ms.",
-        "demo": "#",
-        "github": "#",
-        "featured": true,
-        "year": "2023"
+        "title": "Analytics Dashboard",
+        "description": "Interactive dashboard with real-time data visualization and reports.",
+        "technologies": ["React", "D3.js", "WebSocket", "Firebase"]
       },
       {
-        "title": "REST API Documented - Billing System",
-        "description": "RESTful API for billing management with authentication, user roles and interactive Swagger documentation.",
-        "problem": "Small businesses need a secure and well-documented API to integrate their billing systems.",
-        "role": "Backend Developer - Designed architecture, implemented JWT authentication, roles and OpenAPI documentation.",
-        "technologies": ["Node.js", "Express", "MongoDB", "JWT", "Swagger", "Jest"],
-        "metrics": "API with 99.9% availability and unit tests with 95% coverage.",
-        "demo": "#",
-        "github": "#",
-        "featured": true,
-        "year": "2024"
+        "title": "AI Chat Interface",
+        "description": "Conversational AI interface integrating advanced language models.",
+        "technologies": ["Vue 3", "OpenAI", "WebSocket", "TypeScript"]
+      },
+      {
+        "title": "Game Portfolio",
+        "description": "Interactive portfolio with gamified elements and 3D animations.",
+        "technologies": ["Three.js", "Vue 3", "GSAP", "Tailwind"]
+      },
+      {
+        "title": "Mobile App",
+        "description": "Cross-platform mobile app with React Native and real-time synchronization.",
+        "technologies": ["React Native", "Firebase", "TypeScript", "Expo"]
+      },
+      {
+        "title": "Blockchain Explorer",
+        "description": "Blockchain explorer with transaction and contract visualization.",
+        "technologies": ["Web3.js", "React", "Node.js", "Tailwind"]
       }
     ]
   },
@@ -158,7 +152,7 @@
     "and": "+"
   },
   "theme": {
-    "light": "Light Mode",
-    "dark": "Dark Mode"
+    "light": " Light Mode",
+    "dark": " Dark Mode"
   }
 }
