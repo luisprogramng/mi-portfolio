@@ -74,6 +74,18 @@
     "view": "View project",
     "items": [
       {
+        "title": "FastShip - Shipping Platform",
+        "description": "Complete shipping management platform with real-time tracking. Includes admin panel, notifications and tracking system.",
+        "problem": "Companies need an efficient solution to manage shipments and offer real-time tracking to their customers.",
+        "role": "Full Stack Developer - Designed architecture, implemented real-time tracking system with Socket.io and admin panel.",
+        "technologies": ["React", "Node.js", "MongoDB", "Tailwind", "Socket.io", "JWT"],
+        "metrics": "Processing 500+ daily shipments with real-time updates.",
+        "demo": "https://fastship-sandy.vercel.app",
+        "github": "#",
+        "featured": true,
+        "year": "2024"
+      },
+      {
         "title": "E-commerce Platform",
         "description": "E-commerce platform with inventory management and integrated payments.",
         "technologies": ["Vue 3", "Pinia", "Stripe", "Tailwind"]
@@ -97,23 +109,6 @@
         "title": "Mobile App",
         "description": "Cross-platform mobile app with React Native and real-time synchronization.",
         "technologies": ["React Native", "Firebase", "TypeScript", "Expo"]
-      },
-      {
-        "title": "Blockchain Explorer",
-        "description": "Blockchain explorer with transaction and contract visualization.",
-        "technologies": ["Web3.js", "React", "Node.js", "Tailwind"]
-      },
-      {
-        "title": "FastShip - Shipping Platform",
-        "description": "Complete shipping management platform with real-time tracking. Includes admin panel, notifications and tracking system.",
-        "problem": "Companies need an efficient solution to manage shipments and offer real-time tracking to their customers.",
-        "role": "Full Stack Developer - Designed architecture, implemented real-time tracking system with Socket.io and admin panel.",
-        "technologies": ["React", "Node.js", "MongoDB", "Tailwind", "Socket.io", "JWT"],
-        "metrics": "Processing 500+ daily shipments with real-time updates.",
-        "demo": "https://fastship-sandy.vercel.app",
-        "github": "#",
-        "featured": true,
-        "year": "2024"
       }
     ]
   },
@@ -133,6 +128,7 @@
     "direct": "Direct Contact",
     "follow": "Follow me",
     "send": "Send me a message",
+    "choose": "Choose how you prefer to contact me",
     "email": "Email",
     "whatsapp": "WhatsApp",
     "send_email": "Send Email",
