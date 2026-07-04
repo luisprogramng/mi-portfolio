@@ -67,7 +67,7 @@ const skillCategories = [
       { name: 'React', level: 85 },
       { name: 'TypeScript', level: 90 },
       { name: 'Tailwind CSS', level: 95 },
-      { name: 'Next.js', level: 80 },
+      { name: 'Next.js', level: 80 }
     ]
   },
   {
@@ -79,7 +79,7 @@ const skillCategories = [
       { name: 'Python', level: 75 },
       { name: 'GraphQL', level: 80 },
       { name: 'PostgreSQL', level: 80 },
-      { name: 'MongoDB', level: 75 },
+      { name: 'MongoDB', level: 75 }
     ]
   },
   {
@@ -91,7 +91,7 @@ const skillCategories = [
       { name: 'Docker', level: 80 },
       { name: 'AWS', level: 75 },
       { name: 'Figma', level: 85 },
-      { name: 'CI/CD', level: 75 },
+      { name: 'CI/CD', level: 75 }
     ]
   },
   {
@@ -103,7 +103,7 @@ const skillCategories = [
       { name: 'Flutter', level: 65 },
       { name: 'Web3', level: 70 },
       { name: 'Firebase', level: 85 },
-      { name: 'Supabase', level: 70 },
+      { name: 'Supabase', level: 70 }
     ]
   }
 ]
@@ -119,7 +119,6 @@ const softSkills = [
 
 // ========== GENERAR HTML DEL CV ==========
 const generateCVHTML = () => {
-  // Generar experiencia
   let experienceHTML = ''
   experienceData.value.forEach(exp => {
     experienceHTML += `
@@ -139,7 +138,6 @@ const generateCVHTML = () => {
     `
   })
 
-  // Generar proyectos
   let projectsHTML = ''
   projectsData.value.forEach(project => {
     projectsHTML += `
@@ -157,7 +155,6 @@ const generateCVHTML = () => {
     `
   })
 
-  // Generar habilidades con barras
   let skillsHTML = ''
   skillCategories.forEach(cat => {
     skillsHTML += `
@@ -180,13 +177,9 @@ const generateCVHTML = () => {
     `
   })
 
-  // Generar soft skills
   let softSkillsHTML = softSkills.map(skill => 
     `<span class="soft-skill">${skill.icon} ${skill.name}</span>`
   ).join('')
-
-  // URL de la foto - usando base64 para evitar problemas de CORS
-  const photoUrl = '/src/assets/profile.png'
 
   return `
     <!DOCTYPE html>
@@ -196,12 +189,7 @@ const generateCVHTML = () => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>CV - Luis Albalat</title>
       <style>
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
           font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
           background: #0A0A1A;
@@ -213,20 +201,17 @@ const generateCVHTML = () => {
           align-items: flex-start;
           min-height: 100vh;
         }
-        
         .cv-container {
           max-width: 794px;
           width: 100%;
           margin: 0 auto;
-          background: linear-gradient(145deg, #0A0A1A 0%, #12122A 100%);
+          background: #0A0A1A;
           padding: 35px 30px;
           border-radius: 16px;
           border: 1px solid rgba(255, 255, 255, 0.06);
-          box-shadow: 0 0 60px rgba(0, 212, 255, 0.04);
           position: relative;
           overflow: hidden;
         }
-        
         .cv-container::before {
           content: '';
           position: absolute;
@@ -237,7 +222,6 @@ const generateCVHTML = () => {
           background: radial-gradient(circle, rgba(0, 212, 255, 0.04) 0%, transparent 70%);
           pointer-events: none;
         }
-        
         .cv-container::after {
           content: '';
           position: absolute;
@@ -248,8 +232,6 @@ const generateCVHTML = () => {
           background: radial-gradient(circle, rgba(123, 97, 255, 0.04) 0%, transparent 70%);
           pointer-events: none;
         }
-        
-        /* ===== ENCABEZADO ===== */
         .header {
           display: flex;
           align-items: center;
@@ -261,39 +243,25 @@ const generateCVHTML = () => {
           z-index: 1;
           flex-wrap: wrap;
         }
-        
         .header-avatar {
           flex-shrink: 0;
           width: 110px;
           height: 110px;
           border-radius: 50%;
           border: 3px solid #00D4FF;
-          box-shadow: 0 0 35px rgba(0, 212, 255, 0.12), inset 0 0 35px rgba(0, 212, 255, 0.05);
+          box-shadow: 0 0 35px rgba(0, 212, 255, 0.12);
           overflow: hidden;
           background: #1a1a2e;
-          position: relative;
         }
-        
-        .header-avatar::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          border-radius: 50%;
-          background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(123, 97, 255, 0.05));
-          pointer-events: none;
-        }
-        
         .header-avatar img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
-        
         .header-info {
           flex: 1;
           min-width: 200px;
         }
-        
         .header-info h1 {
           font-size: 32px;
           font-weight: 900;
@@ -302,17 +270,13 @@ const generateCVHTML = () => {
           -webkit-text-fill-color: transparent;
           background-clip: text;
           margin-bottom: 2px;
-          letter-spacing: -0.5px;
         }
-        
         .header-info .subtitle {
           font-size: 16px;
           color: #7B61FF;
           font-weight: 500;
           margin-bottom: 6px;
-          letter-spacing: 0.3px;
         }
-        
         .header-info .contact-info {
           display: flex;
           flex-wrap: wrap;
@@ -320,7 +284,6 @@ const generateCVHTML = () => {
           font-size: 11.5px;
           color: #94A3B8;
         }
-        
         .header-info .contact-info span {
           display: flex;
           align-items: center;
@@ -329,9 +292,7 @@ const generateCVHTML = () => {
           padding: 3px 10px;
           border-radius: 6px;
           border: 1px solid rgba(255, 255, 255, 0.04);
-          font-size: 11px;
         }
-        
         .header-info .social-links {
           display: flex;
           flex-wrap: wrap;
@@ -339,7 +300,6 @@ const generateCVHTML = () => {
           margin-top: 4px;
           font-size: 10.5px;
         }
-        
         .header-info .social-links span {
           color: #00D4FF;
           opacity: 0.7;
@@ -348,7 +308,6 @@ const generateCVHTML = () => {
           border-radius: 6px;
           border: 1px solid rgba(0, 212, 255, 0.05);
         }
-        
         .available-badge {
           display: inline-flex;
           align-items: center;
@@ -361,16 +320,12 @@ const generateCVHTML = () => {
           font-size: 10px;
           font-weight: 600;
           margin-top: 4px;
-          letter-spacing: 0.5px;
         }
-        
-        /* ===== SECCIONES ===== */
         .section {
           margin-bottom: 20px;
           position: relative;
           z-index: 1;
         }
-        
         .section-title {
           font-size: 13px;
           font-weight: 700;
@@ -384,7 +339,6 @@ const generateCVHTML = () => {
           text-transform: uppercase;
           letter-spacing: 1px;
         }
-        
         .section-title::before {
           content: '';
           width: 3px;
@@ -392,15 +346,11 @@ const generateCVHTML = () => {
           background: linear-gradient(to bottom, #00D4FF, #7B61FF);
           border-radius: 2px;
         }
-        
         .profile-text {
           font-size: 12px;
           color: #CBD5E0;
           line-height: 1.8;
-          padding: 0 2px;
         }
-        
-        /* ===== EXPERIENCIA ===== */
         .exp-item {
           margin-bottom: 10px;
           padding: 10px 14px;
@@ -408,9 +358,7 @@ const generateCVHTML = () => {
           border-radius: 10px;
           border: 1px solid rgba(255, 255, 255, 0.04);
           position: relative;
-          transition: all 0.3s ease;
         }
-        
         .exp-item::before {
           content: '';
           position: absolute;
@@ -422,7 +370,6 @@ const generateCVHTML = () => {
           border-radius: 2px;
           opacity: 0.25;
         }
-        
         .exp-header {
           display: flex;
           justify-content: space-between;
@@ -430,19 +377,16 @@ const generateCVHTML = () => {
           flex-wrap: wrap;
           margin-bottom: 2px;
         }
-        
         .exp-header h3 {
           font-size: 13px;
           font-weight: 600;
           color: #E2E8F0;
         }
-        
         .exp-header .company {
           font-size: 11.5px;
           color: #7B61FF;
           font-weight: 500;
         }
-        
         .exp-header .period {
           font-size: 10px;
           color: #94A3B8;
@@ -452,15 +396,12 @@ const generateCVHTML = () => {
           border: 1px solid rgba(255, 255, 255, 0.04);
           white-space: nowrap;
         }
-        
         .exp-description {
           font-size: 11px;
           color: #94A3B8;
           margin-top: 2px;
           line-height: 1.6;
         }
-        
-        /* ===== PROYECTOS ===== */
         .project-item {
           margin-bottom: 8px;
           padding: 8px 14px;
@@ -469,7 +410,6 @@ const generateCVHTML = () => {
           border: 1px solid rgba(255, 255, 255, 0.04);
           position: relative;
         }
-        
         .project-item::before {
           content: '';
           position: absolute;
@@ -481,7 +421,6 @@ const generateCVHTML = () => {
           border-radius: 2px;
           opacity: 0.25;
         }
-        
         .project-header {
           display: flex;
           justify-content: space-between;
@@ -489,13 +428,11 @@ const generateCVHTML = () => {
           flex-wrap: wrap;
           gap: 4px;
         }
-        
         .project-header h3 {
           font-size: 12.5px;
           font-weight: 600;
           color: #E2E8F0;
         }
-        
         .project-year {
           font-size: 9px;
           color: #94A3B8;
@@ -505,14 +442,12 @@ const generateCVHTML = () => {
           border: 1px solid rgba(255, 255, 255, 0.04);
           white-space: nowrap;
         }
-        
         .project-description {
           font-size: 10.5px;
           color: #94A3B8;
           margin-top: 2px;
           line-height: 1.5;
         }
-        
         .metrics {
           font-size: 10px;
           color: #FF6B9D;
@@ -524,15 +459,12 @@ const generateCVHTML = () => {
           display: inline-block;
           border: 1px solid rgba(255, 107, 157, 0.06);
         }
-        
-        /* ===== TECH TAGS ===== */
         .tech-tags {
           display: flex;
           flex-wrap: wrap;
           gap: 4px;
           margin-top: 4px;
         }
-        
         .tech-tag {
           background: rgba(0, 212, 255, 0.05);
           padding: 1px 10px;
@@ -542,55 +474,45 @@ const generateCVHTML = () => {
           border: 1px solid rgba(0, 212, 255, 0.05);
           font-weight: 500;
         }
-        
-        /* ===== SKILLS CON BARRAS ===== */
         .skills-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 10px;
         }
-        
         .skill-category {
           background: rgba(255, 255, 255, 0.02);
           padding: 10px 12px;
           border-radius: 10px;
           border: 1px solid rgba(255, 255, 255, 0.04);
         }
-        
         .skill-category h4 {
           font-size: 11px;
           font-weight: 600;
           color: #7B61FF;
           margin-bottom: 6px;
-          letter-spacing: 0.3px;
         }
-        
         .skill-category ul {
           list-style: none;
           padding: 0;
         }
-        
         .skill-category ul li {
           display: flex;
           align-items: center;
           gap: 6px;
           margin-bottom: 3px;
         }
-        
         .skill-name {
           min-width: 60px;
           font-size: 9.5px;
           font-weight: 500;
           color: #E2E8F0;
         }
-        
         .skill-bar-container {
           flex: 1;
           display: flex;
           align-items: center;
           gap: 4px;
         }
-        
         .skill-bar {
           flex: 1;
           height: 4px;
@@ -598,14 +520,11 @@ const generateCVHTML = () => {
           border-radius: 3px;
           overflow: hidden;
         }
-        
         .skill-bar-fill {
           height: 100%;
           border-radius: 3px;
           background: linear-gradient(90deg, #00D4FF, #7B61FF);
-          transition: width 1s ease;
         }
-        
         .skill-percent {
           font-size: 9px;
           color: #94A3B8;
@@ -613,14 +532,11 @@ const generateCVHTML = () => {
           text-align: right;
           font-weight: 600;
         }
-        
-        /* ===== SOFT SKILLS ===== */
         .soft-skills {
           display: flex;
           flex-wrap: wrap;
           gap: 5px;
         }
-        
         .soft-skill {
           background: rgba(123, 97, 255, 0.05);
           padding: 3px 12px;
@@ -630,8 +546,6 @@ const generateCVHTML = () => {
           border: 1px solid rgba(123, 97, 255, 0.05);
           font-weight: 500;
         }
-        
-        /* ===== IDIOMAS ===== */
         .languages {
           display: flex;
           flex-wrap: wrap;
@@ -639,19 +553,15 @@ const generateCVHTML = () => {
           font-size: 11px;
           color: #CBD5E0;
         }
-        
         .languages strong {
           color: #E2E8F0;
         }
-        
         .language-item {
           background: rgba(255, 255, 255, 0.02);
           padding: 3px 12px;
           border-radius: 8px;
           border: 1px solid rgba(255, 255, 255, 0.04);
         }
-        
-        /* ===== FOOTER ===== */
         .footer {
           margin-top: 20px;
           padding-top: 12px;
@@ -661,29 +571,18 @@ const generateCVHTML = () => {
           color: #4A5568;
           position: relative;
           z-index: 1;
-          letter-spacing: 0.3px;
         }
-        
-        .footer p {
-          margin-bottom: 1px;
-        }
-        
         .footer .highlight {
           color: #00D4FF;
           font-weight: 500;
         }
-        
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 600px) {
           .header {
             flex-direction: column;
             text-align: center;
             gap: 16px;
           }
-          .header-info .contact-info {
-            justify-content: center;
-          }
-          .header-info .social-links {
+          .header-info .contact-info, .header-info .social-links {
             justify-content: center;
           }
           .skills-grid {
@@ -700,8 +599,6 @@ const generateCVHTML = () => {
             font-size: 26px;
           }
         }
-        
-        /* ===== PRINT ===== */
         @media print {
           body {
             background: #0A0A1A;
@@ -714,51 +611,17 @@ const generateCVHTML = () => {
             padding: 25px 20px;
             background: #0A0A1A;
           }
-          .cv-container::before,
-          .cv-container::after {
+          .cv-container::before, .cv-container::after {
             display: none;
-          }
-          .header-avatar {
-            border-color: #00D4FF;
-          }
-          .header-info h1 {
-            -webkit-text-fill-color: #00D4FF;
-            color: #00D4FF;
-          }
-          .exp-item, .project-item, .skill-category {
-            background: rgba(255, 255, 255, 0.02);
-            border-color: rgba(255, 255, 255, 0.04);
-          }
-          .tech-tag {
-            background: rgba(0, 212, 255, 0.06);
-            color: #00D4FF;
-          }
-          .soft-skill {
-            background: rgba(123, 97, 255, 0.05);
-            color: #CBD5E0;
-          }
-          .section-title {
-            color: #00D4FF;
-          }
-          .skill-bar-fill {
-            background: linear-gradient(90deg, #00D4FF, #7B61FF);
-          }
-          .skill-bar {
-            background: rgba(255, 255, 255, 0.05);
-          }
-          .available-badge {
-            background: rgba(0, 212, 255, 0.08);
-            border-color: rgba(0, 212, 255, 0.12);
           }
         }
       </style>
     </head>
     <body>
       <div class="cv-container">
-        <!-- ===== ENCABEZADO ===== -->
         <div class="header">
           <div class="header-avatar">
-            <img src="${photoUrl}" alt="Luis Albalat" />
+            <img src="/src/assets/profile.png" alt="Luis Albalat" />
           </div>
           <div class="header-info">
             <h1>Luis Albalat</h1>
@@ -776,37 +639,31 @@ const generateCVHTML = () => {
           </div>
         </div>
 
-        <!-- ===== PERFIL PROFESIONAL ===== -->
         <div class="section">
           <h2 class="section-title">Perfil Profesional</h2>
           <p class="profile-text">${aboutText.value}</p>
         </div>
 
-        <!-- ===== EXPERIENCIA ===== -->
         <div class="section">
           <h2 class="section-title">Experiencia Profesional</h2>
           ${experienceHTML}
         </div>
 
-        <!-- ===== PROYECTOS ===== -->
         <div class="section">
           <h2 class="section-title">Proyectos Destacados</h2>
           ${projectsHTML}
         </div>
 
-        <!-- ===== HABILIDADES ===== -->
         <div class="section">
           <h2 class="section-title">Habilidades Técnicas</h2>
           <div class="skills-grid">${skillsHTML}</div>
         </div>
 
-        <!-- ===== SOFT SKILLS ===== -->
         <div class="section">
           <h2 class="section-title">Soft Skills</h2>
           <div class="soft-skills">${softSkillsHTML}</div>
         </div>
 
-        <!-- ===== IDIOMAS ===== -->
         <div class="section">
           <h2 class="section-title">Idiomas</h2>
           <div class="languages">
@@ -815,7 +672,6 @@ const generateCVHTML = () => {
           </div>
         </div>
 
-        <!-- ===== FOOTER ===== -->
         <div class="footer">
           <p>📄 Referencias disponibles bajo solicitud</p>
           <p>🔗 <span class="highlight">GitHub:</span> github.com/tuusuario | <span class="highlight">LinkedIn:</span> linkedin.com/in/tuusuario</p>
@@ -842,16 +698,13 @@ const generateCV = async () => {
       return
     }
 
-    // Escribir el HTML en el iframe
     const doc = iframe.contentDocument || iframe.contentWindow.document
     doc.open()
     doc.write(generateCVHTML())
     doc.close()
 
-    // Esperar a que cargue la imagen
     await new Promise(resolve => setTimeout(resolve, 1500))
 
-    // Capturar el contenido del iframe
     const element = iframe.contentDocument.body
     if (!element) {
       console.error('Elemento no encontrado en iframe')
@@ -868,17 +721,9 @@ const generateCV = async () => {
       width: 794,
       height: element.scrollHeight,
       windowWidth: 794,
-      windowHeight: element.scrollHeight,
-      onclone: (clonedDoc) => {
-        // Asegurar que las imágenes se carguen
-        const images = clonedDoc.querySelectorAll('img')
-        images.forEach(img => {
-          img.crossOrigin = 'anonymous'
-        })
-      }
+      windowHeight: element.scrollHeight
     })
 
-    // Crear PDF
     const imgData = canvas.toDataURL('image/png')
     const pdf = new jsPDF('p', 'mm', 'a4')
     const pdfWidth = 210
