@@ -208,7 +208,6 @@ const socials = [
 
 // ===== ENVIAR EMAIL =====
 const handleEmailSubmit = () => {
-  // Aquí iría la lógica para enviar el email
   alert(t('contact.success'))
   
   // Resetear formulario
