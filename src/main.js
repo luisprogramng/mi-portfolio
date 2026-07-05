@@ -6,34 +6,7 @@ import App from './App.vue'
 // FontAwesome
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-// Iconos SOLID
 import { 
-  faCode, faUser, faBriefcase, faProjectDiagram, faCogs, faEnvelope,
-  faArrowRight, faPaperPlane, faCheck, faLocationDot, faPhone,
-  faClock, faShoppingCart, faChartBar, faRobot, faGamepad,
-  faMobileAlt, faLink, faBars, faTimes, faGlobe, faArrowUp,
-  faSpinner, faCheckCircle, faExclamationCircle, faRocket,
-  faLaptopCode, faBrain, faUsers, faChartLine, faDatabase,
-  faServer, faCloud, faShieldAlt, faTools, faPalette,
-  faGear, faLightbulb, faStar, faAward, faGraduationCap,
-  faSyncAlt, faCodeBranch, faFilePdf, faClipboardList
-} from '@fortawesome/free-solid-svg-icons'
-
-// Iconos BRANDS
-import { 
-  faGithub, faLinkedin, faTwitter, faYoutube, faWhatsapp,
-  faVuejs, faReact, faNodeJs, faPython, faDocker,
-  faGitAlt, faFigma, faJs, faHtml5, faCss3Alt
-} from '@fortawesome/free-brands-svg-icons'
-
-// Importar archivos de idiomas
-import es from './locales/es.json'
-import en from './locales/en.json'
-
-// Agregar TODOS los iconos a la librería
-library.add(
-  // Solid
   faCode, faUser, faBriefcase, faProjectDiagram, faCogs, faEnvelope,
   faArrowRight, faPaperPlane, faCheck, faLocationDot, faPhone,
   faClock, faShoppingCart, faChartBar, faRobot, faGamepad,
@@ -43,7 +16,31 @@ library.add(
   faServer, faCloud, faShieldAlt, faTools, faPalette,
   faGear, faLightbulb, faStar, faAward, faGraduationCap,
   faSyncAlt, faCodeBranch, faFilePdf, faClipboardList,
-  // Brands
+  faCalendar, faShippingFast, faCircleInfo, faComment
+} from '@fortawesome/free-solid-svg-icons'
+
+import { 
+  faGithub, faLinkedin, faTwitter, faYoutube, faWhatsapp,
+  faVuejs, faReact, faNodeJs, faPython, faDocker,
+  faGitAlt, faFigma, faJs, faHtml5, faCss3Alt
+} from '@fortawesome/free-brands-svg-icons'
+
+// Importar traducciones
+import es from './locales/es.json'
+import en from './locales/en.json'
+
+// Agregar iconos
+library.add(
+  faCode, faUser, faBriefcase, faProjectDiagram, faCogs, faEnvelope,
+  faArrowRight, faPaperPlane, faCheck, faLocationDot, faPhone,
+  faClock, faShoppingCart, faChartBar, faRobot, faGamepad,
+  faMobileAlt, faLink, faBars, faTimes, faGlobe, faArrowUp,
+  faSpinner, faCheckCircle, faExclamationCircle, faRocket,
+  faLaptopCode, faBrain, faUsers, faChartLine, faDatabase,
+  faServer, faCloud, faShieldAlt, faTools, faPalette,
+  faGear, faLightbulb, faStar, faAward, faGraduationCap,
+  faSyncAlt, faCodeBranch, faFilePdf, faClipboardList,
+  faCalendar, faShippingFast, faCircleInfo, faComment,
   faGithub, faLinkedin, faTwitter, faYoutube, faWhatsapp,
   faVuejs, faReact, faNodeJs, faPython, faDocker,
   faGitAlt, faFigma, faJs, faHtml5, faCss3Alt

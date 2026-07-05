@@ -1,16 +1,14 @@
 <template>
   <section id="experiencia" class="py-24 bg-gray-50/80 dark:bg-dark-200/50 relative transition-colors duration-300">
     <div class="container-custom">
-      <h2 class="section-title">{{ t('experience.title') }}</h2>
-      <p class="section-subtitle">{{ t('experience.subtitle') }}</p>
+      <h2 class="section-title">Experiencia Profesional</h2>
+      <p class="section-subtitle">Trayectoria y proyectos destacados</p>
 
-      <div class="relative" v-if="experienceItems.length > 0">
-        <!-- Línea de tiempo central -->
+      <div class="relative">
         <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent opacity-30"></div>
 
-        <div v-for="(item, index) in experienceItems" :key="index"
+        <div v-for="(item, index) in experienceData" :key="index"
              class="relative mb-12 flex flex-col md:flex-row items-start md:items-center gap-8">
-          <!-- Punto central -->
           <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-1/2 z-10 shadow-neon 
                       flex items-center justify-center">
             <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
@@ -44,60 +42,43 @@
           </div>
         </div>
       </div>
-      
-      <!-- Mensaje de carga o sin datos -->
-      <div v-else class="text-center py-12">
-        <div class="glass-card p-8">
-          <font-awesome-icon icon="spinner" class="text-4xl text-primary animate-spin mb-4" />
-          <p class="text-gray-400">Cargando experiencia...</p>
-        </div>
-      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { ref, onMounted } from 'vue'
 
-const { t, locale } = useI18n()
-
-// Estado
-const experienceItems = ref([])
-
-// Datos por defecto (fallback)
-const defaultExperience = [
+// ===== DATOS DIRECTOS (FALLBACK) =====
+const experienceData = ref([
   {
     company: 'TechCorp Inc.',
     position: 'Senior Frontend Developer',
     period: '2023 - Presente',
-    description: 'Liderando el desarrollo de aplicaciones Vue.js de misión crítica para clientes enterprise.',
-    technologies: ['Vue 3', 'TypeScript', 'Tailwind', 'Pinia']
+    description: 'Liderando el desarrollo de aplicaciones Vue.js de misión crítica para clientes enterprise. Implementación de micro-frontends y optimización de rendimiento.',
+    technologies: ['Vue 3', 'TypeScript', 'Tailwind', 'Pinia', 'Vitest']
+  },
+  {
+    company: 'StartupX',
+    position: 'Full Stack Developer',
+    period: '2021 - 2023',
+    description: 'Desarrollo full stack con Node.js y React para plataforma de análisis de datos en tiempo real. Arquitectura de microservicios y migración a la nube.',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Docker', 'AWS']
+  },
+  {
+    company: 'Freelance',
+    position: 'Web Developer',
+    period: '2020 - 2021',
+    description: 'Desarrollo de proyectos web para diversos clientes, desde landing pages hasta aplicaciones completas. Enfoque en experiencia de usuario y diseño responsive.',
+    technologies: ['Vue 2', 'Firebase', 'WordPress', 'SCSS', 'jQuery']
   }
-]
+])
 
-// Función para cargar datos
-const loadExperience = () => {
-  try {
-    const items = t('experience.items')
-    if (items && Array.isArray(items) && items.length > 0) {
-      experienceItems.value = items
-    } else {
-      experienceItems.value = defaultExperience
-    }
-  } catch (error) {
-    console.warn('Error loading experience:', error)
-    experienceItems.value = defaultExperience
-  }
-}
-
-// Cargar al montar
 onMounted(() => {
-  loadExperience()
-})
-
-// Recargar cuando cambie el idioma
-watch(locale, () => {
-  loadExperience()
+  console.log('💼 Experiencia cargada:', experienceData.value.length)
 })
 </script>
+
+<style scoped>
+/* Estilos adicionales */
+</style>
