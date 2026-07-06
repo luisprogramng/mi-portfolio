@@ -7,8 +7,16 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: false
-    // ✅ Sin minify, sin rollupOptions
+    sourcemap: false,
+    minify: 'terser',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['vue', 'vue-i18n'],
+          icons: ['@fortawesome/fontawesome-svg-core']
+        }
+      }
+    }
   },
   server: {
     port: 5173,
