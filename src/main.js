@@ -6,6 +6,8 @@ import App from './App.vue'
 // FontAwesome
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+// ✅ SOLID ICONS - Todos los que usas
 import { 
   faCode, faUser, faBriefcase, faProjectDiagram, faCogs, faEnvelope,
   faArrowRight, faPaperPlane, faCheck, faLocationDot, faPhone,
@@ -19,6 +21,7 @@ import {
   faCalendar, faShippingFast, faCircleInfo, faComment
 } from '@fortawesome/free-solid-svg-icons'
 
+// ✅ BRAND ICONS
 import { 
   faGithub, faLinkedin, faTwitter, faYoutube, faWhatsapp,
   faVuejs, faReact, faNodeJs, faPython, faDocker,
@@ -29,7 +32,7 @@ import {
 import es from './locales/es.json'
 import en from './locales/en.json'
 
-// Agregar iconos
+// ✅ Agregar TODOS los iconos a la librería
 library.add(
   faCode, faUser, faBriefcase, faProjectDiagram, faCogs, faEnvelope,
   faArrowRight, faPaperPlane, faCheck, faLocationDot, faPhone,
