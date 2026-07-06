@@ -8,12 +8,18 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
-    minify: 'terser',
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['vue', 'vue-i18n'],
-          icons: ['@fortawesome/fontawesome-svg-core']
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            if (id.includes('vue') || id.includes('vue-i18n')) {
+              return 'vendor'
+            }
+            if (id.includes('@fortawesome')) {
+              return 'icons'
+            }
+            return 'vendor'
+          }
         }
       }
     }
@@ -21,5 +27,12 @@ export default defineConfig({
   server: {
     port: 5173,
     open: true
+  },
+  optimizeDeps: {
+    include: ['vue', 'vue-i18n', '@fortawesome/fontawesome-svg-core']
+  },
+  // ✅ Agrega esto para evitar el error
+  esbuild: {
+    logOverride: { 'this-is-undefined-in-esm': 'silent' }
   }
 })
