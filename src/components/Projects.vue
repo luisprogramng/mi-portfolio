@@ -5,7 +5,7 @@
 
     <div class="container-custom relative z-10">
       <h2 class="section-title">
-        <span class="highlight">Proyectos</span> Destacados
+        <span class="highlight">{{ t('projects.title') }}</span>
       </h2>
       <p class="section-subtitle">{{ t('projects.subtitle') }}</p>
 
@@ -17,7 +17,7 @@
               <font-awesome-icon :icon="project.icon || 'code'" class="text-5xl text-primary/50 group-hover:scale-110 transition-transform duration-500" />
             </div>
             <div v-if="project.featured" class="absolute top-4 left-4">
-              <span class="px-3 py-1 bg-primary text-dark-400 text-xs font-bold rounded-full">Destacado</span>
+              <span class="px-3 py-1 bg-primary text-dark-400 text-xs font-bold rounded-full">{{ t('projects.featured') }}</span>
             </div>
           </div>
           <div class="p-6">
@@ -34,13 +34,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'  // ✅ IMPORTAR useI18n
+import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-// ===== OBTENER FUNCIÓN t =====
-const { t } = useI18n()  // ✅ OBTENER t
+const { t } = useI18n()
 
-// ===== DATOS DE PROYECTOS =====
 const projectsData = ref([
   {
     title: 'FastShip - Plataforma de Envíos',
@@ -80,8 +78,4 @@ const projectsData = ref([
     icon: 'mobile-alt'
   }
 ])
-
-onMounted(() => {
-  console.log('📦 Proyectos cargados:', projectsData.value.length)
-})
 </script>

@@ -5,7 +5,7 @@
 
     <div class="container-custom relative z-10">
       <h2 class="section-title">
-        <span class="highlight">Mis</span> Habilidades
+        <span class="highlight">{{ t('skills.title') }}</span>
       </h2>
       <p class="section-subtitle">{{ t('skills.subtitle') }}</p>
 
@@ -13,7 +13,7 @@
         <div v-for="(category, index) in skillCategories" :key="index" class="glass-card p-6">
           <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
             <font-awesome-icon :icon="category.icon" class="text-primary" />
-            {{ category.name }}
+            {{ t(`skills.categories.${category.key}`) }}
           </h3>
           <div class="space-y-4">
             <div v-for="skill in category.skills" :key="skill.name">
@@ -33,15 +33,13 @@
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n'  // ✅ IMPORTAR useI18n
+import { useI18n } from 'vue-i18n'
 
-// ===== OBTENER FUNCIÓN t =====
-const { t } = useI18n()  // ✅ OBTENER t
+const { t } = useI18n()
 
-// ===== DATOS DE SKILLS =====
 const skillCategories = [
   {
-    name: 'Frontend',
+    key: 'frontend',
     icon: 'code',
     skills: [
       { name: 'Vue.js', level: 95 },
@@ -51,7 +49,7 @@ const skillCategories = [
     ]
   },
   {
-    name: 'Backend',
+    key: 'backend',
     icon: 'server',
     skills: [
       { name: 'Node.js', level: 85 },
@@ -61,13 +59,23 @@ const skillCategories = [
     ]
   },
   {
-    name: 'Herramientas',
+    key: 'tools',
     icon: 'tools',
     skills: [
       { name: 'Git', level: 95 },
       { name: 'Docker', level: 80 },
       { name: 'AWS', level: 75 },
       { name: 'Figma', level: 85 },
+    ]
+  },
+  {
+    key: 'mobile',
+    icon: 'mobile-alt',
+    skills: [
+      { name: 'React Native', level: 80 },
+      { name: 'Flutter', level: 65 },
+      { name: 'Firebase', level: 85 },
+      { name: 'Supabase', level: 70 },
     ]
   }
 ]

@@ -5,7 +5,7 @@
 
     <div class="container-custom relative z-10">
       <h2 class="section-title">
-        <span class="highlight">Experiencia</span> Profesional
+        <span class="highlight">{{ t('experience.title') }}</span>
       </h2>
       <p class="section-subtitle">{{ t('experience.subtitle') }}</p>
 
@@ -45,6 +45,7 @@ import { ref, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
+
 const experienceItems = ref([])
 
 const defaultExperience = [

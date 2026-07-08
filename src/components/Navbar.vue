@@ -14,30 +14,34 @@
           <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
         </a>
         
-        <!-- ===== SELECTOR DE IDIOMA CON ICONOS ===== -->
+        <!-- ===== SELECTOR DE IDIOMA CON BANDERAS ===== -->
         <div class="ml-4 relative">
           <button @click="showLanguageMenu = !showLanguageMenu" 
                   class="p-2 rounded-lg border border-glass-border hover:border-primary transition-all flex items-center gap-2 text-text-secondary hover:text-primary">
-            <font-awesome-icon icon="globe" class="text-sm" />
+            <span class="text-xl leading-none">{{ currentLocale === 'es' ? '🇪🇸' : '🇬🇧' }}</span>
             <span class="text-sm font-medium">{{ currentLocale === 'es' ? 'ES' : 'EN' }}</span>
             <font-awesome-icon icon="chevron-down" class="text-xs" />
           </button>
           
           <div v-if="showLanguageMenu" 
-               class="absolute right-0 mt-2 bg-dark-300 border border-glass-border rounded-lg shadow-card p-2 min-w-[160px]">
+               class="absolute right-0 mt-2 bg-dark-300 border border-glass-border rounded-lg shadow-card p-2 min-w-[180px]">
+            
+            <!-- Español -->
             <button @click="changeLanguage('es'); showLanguageMenu = false" 
                     class="w-full px-4 py-2.5 text-left text-sm rounded-lg transition-all flex items-center gap-3"
                     :class="currentLocale === 'es' ? 'bg-primary/10 text-primary' : 'text-text-secondary hover:bg-dark-200'">
-              <span class="text-xl">🇪🇸</span>
+              <span class="text-2xl leading-none">🇪🇸</span>
               <span>Español</span>
               <span v-if="currentLocale === 'es'" class="ml-auto text-primary">
                 <font-awesome-icon icon="check" />
               </span>
             </button>
+            
+            <!-- Inglés -->
             <button @click="changeLanguage('en'); showLanguageMenu = false" 
                     class="w-full px-4 py-2.5 text-left text-sm rounded-lg transition-all flex items-center gap-3"
                     :class="currentLocale === 'en' ? 'bg-primary/10 text-primary' : 'text-text-secondary hover:bg-dark-200'">
-              <span class="text-xl">🇬🇧</span>
+              <span class="text-2xl leading-none">🇬🇧</span>
               <span>English</span>
               <span v-if="currentLocale === 'en'" class="ml-auto text-primary">
                 <font-awesome-icon icon="check" />
@@ -59,31 +63,36 @@
       </button>
     </div>
     
-    <!-- Menú móvil desplegado -->
+    <!-- ===== MENÚ MÓVIL DESPLEGADO ===== -->
     <div v-if="mobileMenuOpen" class="md:hidden bg-dark-300 border-b border-glass-border p-4">
       <div class="flex flex-col space-y-3">
+        <!-- Enlaces -->
         <a v-for="item in menuItems" :key="item.key" :href="'#' + item.key"
            class="px-4 py-2 text-text-secondary hover:text-primary hover:bg-dark-200 rounded-lg transition-all"
            @click="mobileMenuOpen = false">
           {{ item.label }}
         </a>
         
-        <!-- Selector de idioma en móvil -->
+        <!-- Selector de idioma en móvil con banderas -->
         <div class="border-t border-glass-border pt-3">
+          <p class="text-xs text-text-secondary uppercase tracking-wider px-4 mb-2">Idioma</p>
           <div class="flex gap-2">
             <button @click="changeLanguage('es'); mobileMenuOpen = false" 
                     class="flex-1 px-4 py-2.5 text-sm rounded-lg transition-all flex items-center justify-center gap-2"
                     :class="currentLocale === 'es' ? 'bg-primary text-dark-400' : 'border border-glass-border text-text-secondary hover:text-primary'">
-              <span>🇪🇸</span> ES
+              <span class="text-xl">🇪🇸</span>
+              <span>Español</span>
             </button>
             <button @click="changeLanguage('en'); mobileMenuOpen = false" 
                     class="flex-1 px-4 py-2.5 text-sm rounded-lg transition-all flex items-center justify-center gap-2"
                     :class="currentLocale === 'en' ? 'bg-primary text-dark-400' : 'border border-glass-border text-text-secondary hover:text-primary'">
-              <span>🇬🇧</span> EN
+              <span class="text-xl">🇬🇧</span>
+              <span>English</span>
             </button>
           </div>
         </div>
         
+        <!-- Botón tema -->
         <button @click="toggleTheme" class="w-full px-4 py-2 text-left text-text-secondary hover:text-primary hover:bg-dark-200 rounded-lg transition-all">
           {{ isDark ? '☀️ ' + t('theme.light') : '🌙 ' + t('theme.dark') }}
         </button>
@@ -114,3 +123,7 @@ const menuItems = computed(() => [
   { key: 'contacto', label: t('nav.contact') }
 ])
 </script>
+
+<style scoped>
+/* Estilos adicionales si son necesarios */
+</style>

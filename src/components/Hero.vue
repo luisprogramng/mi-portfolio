@@ -50,7 +50,7 @@
         <div class="flex gap-8 pt-4 border-t border-white/5">
           <div v-for="stat in stats" :key="stat.label" class="text-center">
             <div class="text-2xl font-bold text-primary">{{ stat.value }}</div>
-            <div class="text-xs text-text-secondary">{{ stat.label }}</div>
+            <div class="text-xs text-text-secondary">{{ t(`hero.${stat.key}`) }}</div>
           </div>
         </div>
       </div>
@@ -67,7 +67,6 @@
               />
             </div>
           </div>
-          <!-- Anillos decorativos -->
           <div class="absolute -inset-4 rounded-full border border-primary/10 animate-pulse"></div>
           <div class="absolute -inset-8 rounded-full border border-primary/5 animate-pulse" style="animation-delay: 1s"></div>
         </div>
@@ -90,9 +89,9 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
 const stats = [
-  { value: '3+', label: 'Años' },
-  { value: '20+', label: 'Proyectos' },
-  { value: '10+', label: 'Clientes' }
+  { value: '3+', key: 'years' },
+  { value: '20+', key: 'projects_count' },
+  { value: '10+', key: 'clients' }
 ]
 </script>
 

@@ -5,7 +5,7 @@
 
     <div class="container-custom relative z-10">
       <h2 class="section-title">
-        <span class="highlight">Sobre</span> Mí
+        <span class="highlight">{{ t('about.title') }}</span>
       </h2>
       <p class="section-subtitle">{{ t('about.subtitle') }}</p>
 
@@ -38,28 +38,16 @@
 
           <!-- Datos clave -->
           <div class="grid grid-cols-2 gap-4">
-            <div class="glass-card p-4">
-              <p class="text-xs text-text-secondary uppercase tracking-wider">Nombre</p>
-              <p class="text-white font-medium">Luis Albalat</p>
-            </div>
-            <div class="glass-card p-4">
-              <p class="text-xs text-text-secondary uppercase tracking-wider">Email</p>
-              <p class="text-white font-medium">luisprogramming2@gmail.com</p>
-            </div>
-            <div class="glass-card p-4">
-              <p class="text-xs text-text-secondary uppercase tracking-wider">Ubicación</p>
-              <p class="text-white font-medium">Matanzas, Cuba</p>
-            </div>
-            <div class="glass-card p-4">
-              <p class="text-xs text-text-secondary uppercase tracking-wider">Disponibilidad</p>
-              <p class="text-white font-medium">Freelance</p>
+            <div v-for="info in aboutInfo" :key="info.key" class="glass-card p-4">
+              <p class="text-xs text-text-secondary uppercase tracking-wider">{{ t(`about.info.${info.key}`) }}</p>
+              <p class="text-white font-medium">{{ info.value }}</p>
             </div>
           </div>
 
           <!-- Botón CV -->
           <a href="#" class="btn-primary inline-flex">
             <font-awesome-icon icon="file-pdf" class="mr-2" />
-            Descargar CV
+            {{ t('about.download_cv') }}
           </a>
         </div>
       </div>
@@ -68,8 +56,14 @@
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n'  // ✅ IMPORTAR useI18n
+import { useI18n } from 'vue-i18n'
 
-// ===== OBTENER FUNCIÓN t =====
-const { t } = useI18n()  // ✅ OBTENER t
+const { t } = useI18n()
+
+const aboutInfo = [
+  { key: 'name', value: 'Luis Albalat' },
+  { key: 'email', value: 'luisprogramming2@gmail.com' },
+  { key: 'location', value: 'Matanzas, Cuba' },
+  { key: 'availability', value: t('about.info.freelance') }
+]
 </script>
