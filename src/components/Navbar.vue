@@ -14,24 +14,34 @@
           <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
         </a>
         
-        <!-- Selector de idioma -->
+        <!-- ===== SELECTOR DE IDIOMA CON ICONOS ===== -->
         <div class="ml-4 relative">
           <button @click="showLanguageMenu = !showLanguageMenu" 
                   class="p-2 rounded-lg border border-glass-border hover:border-primary transition-all flex items-center gap-2 text-text-secondary hover:text-primary">
-            <font-awesome-icon icon="globe" />
-            <span class="text-sm">{{ currentLocale === 'es' ? 'ES' : 'EN' }}</span>
+            <font-awesome-icon icon="globe" class="text-sm" />
+            <span class="text-sm font-medium">{{ currentLocale === 'es' ? 'ES' : 'EN' }}</span>
+            <font-awesome-icon icon="chevron-down" class="text-xs" />
           </button>
+          
           <div v-if="showLanguageMenu" 
-               class="absolute right-0 mt-2 bg-dark-300 border border-glass-border rounded-lg shadow-card p-2 min-w-[120px]">
+               class="absolute right-0 mt-2 bg-dark-300 border border-glass-border rounded-lg shadow-card p-2 min-w-[160px]">
             <button @click="changeLanguage('es'); showLanguageMenu = false" 
-                    class="w-full px-4 py-2 text-left text-sm hover:bg-dark-200 rounded-lg transition-colors"
-                    :class="currentLocale === 'es' ? 'text-primary' : 'text-text-secondary'">
-              🇪🇸 Español
+                    class="w-full px-4 py-2.5 text-left text-sm rounded-lg transition-all flex items-center gap-3"
+                    :class="currentLocale === 'es' ? 'bg-primary/10 text-primary' : 'text-text-secondary hover:bg-dark-200'">
+              <span class="text-xl">🇪🇸</span>
+              <span>Español</span>
+              <span v-if="currentLocale === 'es'" class="ml-auto text-primary">
+                <font-awesome-icon icon="check" />
+              </span>
             </button>
             <button @click="changeLanguage('en'); showLanguageMenu = false" 
-                    class="w-full px-4 py-2 text-left text-sm hover:bg-dark-200 rounded-lg transition-colors"
-                    :class="currentLocale === 'en' ? 'text-primary' : 'text-text-secondary'">
-              🇬🇧 English
+                    class="w-full px-4 py-2.5 text-left text-sm rounded-lg transition-all flex items-center gap-3"
+                    :class="currentLocale === 'en' ? 'bg-primary/10 text-primary' : 'text-text-secondary hover:bg-dark-200'">
+              <span class="text-xl">🇬🇧</span>
+              <span>English</span>
+              <span v-if="currentLocale === 'en'" class="ml-auto text-primary">
+                <font-awesome-icon icon="check" />
+              </span>
             </button>
           </div>
         </div>
@@ -57,18 +67,23 @@
            @click="mobileMenuOpen = false">
           {{ item.label }}
         </a>
-        <div class="border-t border-glass-border pt-3 flex gap-2">
-          <button @click="changeLanguage('es')" 
-                  class="flex-1 px-4 py-2 text-sm rounded-lg transition-all"
-                  :class="currentLocale === 'es' ? 'bg-primary text-dark-400' : 'border border-glass-border text-text-secondary hover:text-primary'">
-            🇪🇸 ES
-          </button>
-          <button @click="changeLanguage('en')" 
-                  class="flex-1 px-4 py-2 text-sm rounded-lg transition-all"
-                  :class="currentLocale === 'en' ? 'bg-primary text-dark-400' : 'border border-glass-border text-text-secondary hover:text-primary'">
-            🇬🇧 EN
-          </button>
+        
+        <!-- Selector de idioma en móvil -->
+        <div class="border-t border-glass-border pt-3">
+          <div class="flex gap-2">
+            <button @click="changeLanguage('es'); mobileMenuOpen = false" 
+                    class="flex-1 px-4 py-2.5 text-sm rounded-lg transition-all flex items-center justify-center gap-2"
+                    :class="currentLocale === 'es' ? 'bg-primary text-dark-400' : 'border border-glass-border text-text-secondary hover:text-primary'">
+              <span>🇪🇸</span> ES
+            </button>
+            <button @click="changeLanguage('en'); mobileMenuOpen = false" 
+                    class="flex-1 px-4 py-2.5 text-sm rounded-lg transition-all flex items-center justify-center gap-2"
+                    :class="currentLocale === 'en' ? 'bg-primary text-dark-400' : 'border border-glass-border text-text-secondary hover:text-primary'">
+              <span>🇬🇧</span> EN
+            </button>
+          </div>
         </div>
+        
         <button @click="toggleTheme" class="w-full px-4 py-2 text-left text-text-secondary hover:text-primary hover:bg-dark-200 rounded-lg transition-all">
           {{ isDark ? '☀️ ' + t('theme.light') : '🌙 ' + t('theme.dark') }}
         </button>

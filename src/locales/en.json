@@ -17,7 +17,9 @@
     "scroll": "SCROLL",
     "years": "Years",
     "projects_count": "Projects",
-    "clients": "Clients"
+    "clients": "Clients",
+    "hire_me": "Hire Me",
+    "my_works": "My Works"
   },
   "about": {
     "title": "About Me",
@@ -29,6 +31,7 @@
     "clients": "Clients",
     "stack": "Main Stack",
     "methodology": "Methodology",
+    "download_cv": "Download CV",
     "methodologies": {
       "results": {
         "title": "Results Focused",
@@ -42,6 +45,13 @@
         "title": "Mobile First",
         "description": "Optimized experiences for all devices"
       }
+    },
+    "info": {
+      "name": "Name",
+      "email": "Email",
+      "location": "Location",
+      "availability": "Availability",
+      "freelance": "Freelance"
     }
   },
   "experience": {
@@ -76,6 +86,7 @@
     "subtitle": "Projects that demonstrate my technical skills",
     "view": "View project",
     "featured": "Featured",
+    "code": "Code",
     "items": [
       {
         "title": "FastShip - Shipping Platform",
@@ -121,7 +132,10 @@
       "backend": "Backend",
       "tools": "Tools",
       "mobile": "Mobile & Others"
-    }
+    },
+    "learning": "Learning",
+    "soft_skills": "Soft Skills",
+    "extra_tools": "Extra Tools"
   },
   "contact": {
     "title": "Contact Me",
@@ -139,6 +153,12 @@
     "number": "Number: +53 54556198",
     "success": "Message sent! I'll contact you soon.",
     "available": "Available to respond in minutes",
+    "info": "Information",
+    "send_message": "Send me a message",
+    "your_name": "Your name",
+    "your_email": "Your email",
+    "your_message": "Your message",
+    "send": "Send",
     "labels": {
       "email": "Email",
       "phone": "Phone",
@@ -154,7 +174,8 @@
   },
   "footer": {
     "built": "Built with",
-    "and": "+"
+    "and": "+",
+    "rights": "All rights reserved"
   },
   "theme": {
     "light": "☀️ Light Mode",

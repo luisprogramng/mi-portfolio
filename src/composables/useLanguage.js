@@ -1,16 +1,15 @@
-import { ref, watch } from 'vue'
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 export function useLanguage() {
   const { locale } = useI18n()
-  const currentLocale = ref('es')
+  const currentLocale = ref(locale.value || 'es')
   
   const changeLanguage = (lang) => {
     if (lang === 'es' || lang === 'en') {
       currentLocale.value = lang
       locale.value = lang
       localStorage.setItem('locale', lang)
-      // No recargamos la página, los cambios son reactivos
     }
   }
 
@@ -22,16 +21,7 @@ export function useLanguage() {
     }
   }
 
-  // Cargar idioma guardado
   loadLanguage()
-
-  // Guardar cambios en localStorage cuando cambie el idioma
-  watch(locale, (newLocale) => {
-    if (newLocale === 'es' || newLocale === 'en') {
-      localStorage.setItem('locale', newLocale)
-      currentLocale.value = newLocale
-    }
-  })
 
   return {
     currentLocale,

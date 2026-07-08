@@ -17,7 +17,9 @@
     "scroll": "SCROLL",
     "years": "Años",
     "projects_count": "Proyectos",
-    "clients": "Clientes"
+    "clients": "Clientes",
+    "hire_me": "Contratarme",
+    "my_works": "Mis Trabajos"
   },
   "about": {
     "title": "Sobre Mí",
@@ -29,6 +31,7 @@
     "clients": "Clientes",
     "stack": "Stack Principal",
     "methodology": "Metodología",
+    "download_cv": "Descargar CV",
     "methodologies": {
       "results": {
         "title": "Enfoque en Resultados",
@@ -42,6 +45,13 @@
         "title": "Mobile First",
         "description": "Experiencias optimizadas para todos los dispositivos"
       }
+    },
+    "info": {
+      "name": "Nombre",
+      "email": "Email",
+      "location": "Ubicación",
+      "availability": "Disponibilidad",
+      "freelance": "Freelance"
     }
   },
   "experience": {
@@ -76,6 +86,7 @@
     "subtitle": "Trabajos que demuestran mi capacidad técnica",
     "view": "Ver proyecto",
     "featured": "Destacado",
+    "code": "Código",
     "items": [
       {
         "title": "FastShip - Plataforma de Envíos",
@@ -121,7 +132,10 @@
       "backend": "Backend",
       "tools": "Herramientas",
       "mobile": "Móvil & Otros"
-    }
+    },
+    "learning": "En Aprendizaje",
+    "soft_skills": "Soft Skills",
+    "extra_tools": "Herramientas Extra"
   },
   "contact": {
     "title": "Contáctame",
@@ -139,6 +153,12 @@
     "number": "Número: +53 54556198",
     "success": "¡Mensaje enviado! Te contactaré pronto.",
     "available": "Disponible para responder en minutos",
+    "info": "Información",
+    "send_message": "Envíame un mensaje",
+    "your_name": "Tu nombre",
+    "your_email": "Tu email",
+    "your_message": "Tu mensaje",
+    "send": "Enviar",
     "labels": {
       "email": "Email",
       "phone": "Teléfono",
@@ -154,7 +174,8 @@
   },
   "footer": {
     "built": "Construido con",
-    "and": "+"
+    "and": "+",
+    "rights": "Todos los derechos reservados"
   },
   "theme": {
     "light": "☀️ Modo Claro",
