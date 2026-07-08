@@ -18,7 +18,8 @@ import {
   faServer, faCloud, faShieldAlt, faTools, faPalette,
   faGear, faLightbulb, faStar, faAward, faGraduationCap,
   faSyncAlt, faCodeBranch, faFilePdf, faClipboardList,
-  faCalendar, faShippingFast, faCircleInfo, faComment
+  faCalendar, faShippingFast, faCircleInfo, faComment,
+  faUserTie, faCalendarAlt
 } from '@fortawesome/free-solid-svg-icons'
 
 // ✅ BRAND ICONS
@@ -34,6 +35,7 @@ import en from './locales/en.json'
 
 // ✅ Agregar TODOS los iconos a la librería
 library.add(
+  // Solid
   faCode, faUser, faBriefcase, faProjectDiagram, faCogs, faEnvelope,
   faArrowRight, faPaperPlane, faCheck, faLocationDot, faPhone,
   faClock, faShoppingCart, faChartBar, faRobot, faGamepad,
@@ -44,6 +46,8 @@ library.add(
   faGear, faLightbulb, faStar, faAward, faGraduationCap,
   faSyncAlt, faCodeBranch, faFilePdf, faClipboardList,
   faCalendar, faShippingFast, faCircleInfo, faComment,
+  faUserTie, faCalendarAlt,
+  // Brands
   faGithub, faLinkedin, faTwitter, faYoutube, faWhatsapp,
   faVuejs, faReact, faNodeJs, faPython, faDocker,
   faGitAlt, faFigma, faJs, faHtml5, faCss3Alt

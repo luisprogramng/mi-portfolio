@@ -1,78 +1,66 @@
 <template>
-  <section id="sobre mí" class="py-24 relative">
-    <div class="container-custom">
-      <h2 class="section-title">{{ t('about.title') }}</h2>
-      <p class="section-subtitle">{{ t('about.subtitle') }}</p>
-      
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
-        <div class="space-y-6">
-          <div class="glass-card p-8 hover:shadow-card-hover transition-all duration-500">
-            <h3 class="text-2xl font-display font-bold text-gradient mb-4 flex items-center gap-3">
-              <font-awesome-icon icon="user" class="text-primary" />
-              {{ t('about.story_short') }}
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-              {{ t('about.story') }}
-            </p>
-            <div class="mt-6 grid grid-cols-3 gap-4">
-              <div class="text-center group hover:scale-110 transition-transform duration-300">
-                <div class="text-3xl font-bold text-primary flex items-center justify-center gap-2">
-                  <font-awesome-icon icon="award" class="text-xl" />
-                  3+
-                </div>
-                <div class="text-xs text-gray-500">{{ t('about.years') }}</div>
-              </div>
-              <div class="text-center group hover:scale-110 transition-transform duration-300">
-                <div class="text-3xl font-bold text-secondary flex items-center justify-center gap-2">
-                  <font-awesome-icon icon="project-diagram" class="text-xl" />
-                  20+
-                </div>
-                <div class="text-xs text-gray-500">{{ t('about.projects') }}</div>
-              </div>
-              <div class="text-center group hover:scale-110 transition-transform duration-300">
-                <div class="text-3xl font-bold text-accent flex items-center justify-center gap-2">
-                  <font-awesome-icon icon="users" class="text-xl" />
-                  10+
-                </div>
-                <div class="text-xs text-gray-500">{{ t('about.clients') }}</div>
-              </div>
-            </div>
-          </div>
+  <section id="sobre-mi" class="py-24 relative overflow-hidden">
+    <!-- Texto decorativo gigante -->
+    <div class="giant-text top-1/4 right-0 translate-x-1/3 select-none">ABOUT</div>
 
-          <div class="glass-card p-8 hover:shadow-card-hover transition-all duration-500">
-            <h3 class="text-2xl font-display font-bold text-gradient mb-4 flex items-center gap-3">
-              <font-awesome-icon icon="laptop-code" class="text-primary" />
-              {{ t('about.stack') }}
-            </h3>
-            <div class="flex flex-wrap gap-3">
-              <span v-for="tech in mainTech" :key="tech" class="tech-chip group hover:scale-105 transition-all duration-300">
-                <font-awesome-icon :icon="getTechIcon(tech)" class="mr-2 text-primary" />
-                {{ tech }}
-              </span>
+    <div class="container-custom relative z-10">
+      <h2 class="section-title">
+        <span class="highlight">Sobre</span> Mí
+      </h2>
+      <p class="section-subtitle">{{ t('about.subtitle') }}</p>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <!-- Columna Izquierda - Foto -->
+        <div class="flex justify-center">
+          <div class="relative">
+            <div class="w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden border border-primary/10 shadow-gold">
+              <img 
+                src="/src/assets/profile.png" 
+                alt="Luis Albalat"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+            <div class="absolute -bottom-4 -right-4 glass-card px-6 py-3 rounded-full">
+              <span class="text-primary font-bold">3+</span>
+              <span class="text-text-secondary text-sm ml-1">{{ t('about.years') }}</span>
             </div>
           </div>
         </div>
 
+        <!-- Columna Derecha - Información -->
         <div class="space-y-6">
-          <div class="glass-card p-8 hover:shadow-card-hover transition-all duration-500">
-            <h3 class="text-2xl font-display font-bold text-gradient mb-4 flex items-center gap-3">
-              <font-awesome-icon icon="brain" class="text-primary" />
-              {{ t('about.methodology') }}
-            </h3>
-            <div class="space-y-4">
-              <div v-for="(item, index) in methodology" :key="index" 
-                   class="flex items-start gap-4 group hover:bg-gray-50/50 p-3 rounded-lg transition-all cursor-default
-                          dark:hover:bg-glass hover:scale-[1.02] duration-300">
-                <font-awesome-icon :icon="item.icon" class="text-2xl text-primary" />
-                <div>
-                  <h4 class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">
-                    {{ t(`about.methodologies.${item.key}.title`) }}
-                  </h4>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">{{ t(`about.methodologies.${item.key}.description`) }}</p>
-                </div>
-              </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-2">{{ t('about.story_short') }}</h3>
+            <p class="text-text-secondary leading-relaxed">
+              {{ t('about.story') }}
+            </p>
+          </div>
+
+          <!-- Datos clave -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="glass-card p-4">
+              <p class="text-xs text-text-secondary uppercase tracking-wider">Nombre</p>
+              <p class="text-white font-medium">Luis Albalat</p>
+            </div>
+            <div class="glass-card p-4">
+              <p class="text-xs text-text-secondary uppercase tracking-wider">Email</p>
+              <p class="text-white font-medium">luisprogramming2@gmail.com</p>
+            </div>
+            <div class="glass-card p-4">
+              <p class="text-xs text-text-secondary uppercase tracking-wider">Ubicación</p>
+              <p class="text-white font-medium">Matanzas, Cuba</p>
+            </div>
+            <div class="glass-card p-4">
+              <p class="text-xs text-text-secondary uppercase tracking-wider">Disponibilidad</p>
+              <p class="text-white font-medium">Freelance</p>
             </div>
           </div>
+
+          <!-- Botón CV -->
+          <a href="#" class="btn-primary inline-flex">
+            <font-awesome-icon icon="file-pdf" class="mr-2" />
+            Descargar CV
+          </a>
         </div>
       </div>
     </div>
@@ -80,27 +68,8 @@
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n'
+import { useI18n } from 'vue-i18n'  // ✅ IMPORTAR useI18n
 
-const { t } = useI18n()
-
-const mainTech = ['Vue.js', 'React', 'TypeScript', 'Node.js', 'Tailwind', 'GraphQL']
-
-const getTechIcon = (tech) => {
-  const icons = {
-    'Vue.js': ['fab', 'vuejs'],
-    'React': ['fab', 'react'],
-    'TypeScript': ['fab', 'js'],
-    'Node.js': ['fab', 'node-js'],
-    'Tailwind': ['fab', 'css3-alt'],
-    'GraphQL': ['fab', 'react']
-  }
-  return icons[tech] || 'code'
-}
-
-const methodology = [
-  { icon: 'rocket', key: 'results' },
-  { icon: 'sync-alt', key: 'agile' },
-  { icon: 'mobile-alt', key: 'mobile' },
-]
+// ===== OBTENER FUNCIÓN t =====
+const { t } = useI18n()  // ✅ OBTENER t
 </script>

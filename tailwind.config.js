@@ -8,39 +8,37 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#00D4FF',
-        secondary: '#7B61FF',
-        accent: '#FF6B9D',
+        primary: '#f1b24a',
+        secondary: '#f1b24a',
+        accent: '#f1b24a',
         dark: {
-          100: '#1A1A2E',
-          200: '#16213E',
-          300: '#0F3460',
-          400: '#0A0A1A',
+          400: '#000000',
+          300: '#0a0a0a',
+          200: '#1a1a1a',
+          100: '#2a2a2a',
         },
-        // Colores para modo claro
-        light: {
-          100: '#F8F9FA',
-          200: '#E9ECEF',
-          300: '#DEE2E6',
-          400: '#CED4DA',
+        text: {
+          primary: '#ffffff',
+          secondary: '#a0a0a0',
+          muted: '#666666',
         },
-        glass: 'rgba(255, 255, 255, 0.05)',
-        'glass-border': 'rgba(255, 255, 255, 0.1)',
+        glass: 'rgba(255, 255, 255, 0.03)',
+        'glass-border': 'rgba(255, 255, 255, 0.06)',
       },
       fontFamily: {
-        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
         display: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        mono: ['SF Mono', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+        mono: ['JetBrains Mono', 'SF Mono', 'monospace'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite',
-        'slide-up': 'slideUp 0.5s ease-out',
-        'slide-down': 'slideDown 0.5s ease-out',
+        'slide-up': 'slideUp 0.6s ease-out',
+        'slide-down': 'slideDown 0.6s ease-out',
+        'pulse-slow': 'pulse 3s ease-in-out infinite',
       },
       keyframes: {
         float: {
@@ -52,23 +50,19 @@ export default {
           '50%': { opacity: 0.5 },
         },
         slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: 0 },
+          '0%': { transform: 'translateY(30px)', opacity: 0 },
           '100%': { transform: 'translateY(0)', opacity: 1 },
         },
         slideDown: {
-          '0%': { transform: 'translateY(-20px)', opacity: 0 },
+          '0%': { transform: 'translateY(-30px)', opacity: 0 },
           '100%': { transform: 'translateY(0)', opacity: 1 },
         },
       },
       boxShadow: {
-        'neon': '0 0 30px rgba(0, 212, 255, 0.2)',
-        'neon-strong': '0 0 50px rgba(0, 212, 255, 0.3)',
-        'glass': '0 8px 32px rgba(0, 0, 0, 0.3)',
-        'card': '0 4px 20px rgba(0, 0, 0, 0.06)',
-        'card-hover': '0 8px 30px rgba(0, 0, 0, 0.12)',
-      },
-      backdropBlur: {
-        'glass': '20px',
+        'gold': '0 0 40px rgba(241, 178, 74, 0.15)',
+        'gold-strong': '0 0 60px rgba(241, 178, 74, 0.25)',
+        'card': '0 4px 20px rgba(0, 0, 0, 0.3)',
+        'card-hover': '0 8px 40px rgba(0, 0, 0, 0.5)',
       },
     },
   },

@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen transition-colors duration-300">
+  <div class="min-h-screen bg-dark-400">
     <Navbar />
     <Hero />
     <About />
@@ -21,26 +21,3 @@ import Skills from './components/Skills.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 </script>
-
-<style>
-/* Animaciones globales */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.animate-on-scroll.animate-slide-up {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Efecto de hover en tarjetas */
-.glass-card {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.glass-card:hover {
-  transform: translateY(-4px);
-}
-</style>

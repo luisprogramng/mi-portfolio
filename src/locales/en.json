@@ -14,7 +14,10 @@
     "cta_projects": "View Projects",
     "cta_contact": "Contact",
     "available": "Available for work",
-    "scroll": "SCROLL"
+    "scroll": "SCROLL",
+    "years": "Years",
+    "projects_count": "Projects",
+    "clients": "Clients"
   },
   "about": {
     "title": "About Me",
@@ -72,6 +75,7 @@
     "title": "Featured Projects",
     "subtitle": "Projects that demonstrate my technical skills",
     "view": "View project",
+    "featured": "Featured",
     "items": [
       {
         "title": "FastShip - Shipping Platform",
@@ -80,10 +84,7 @@
         "role": "Full Stack Developer - Designed architecture, implemented real-time tracking system with Socket.io and admin panel.",
         "technologies": ["React", "Node.js", "MongoDB", "Tailwind", "Socket.io", "JWT"],
         "metrics": "Processing 500+ daily shipments with real-time updates.",
-        "demo": "https://fastship-sandy.vercel.app",
-        "github": "#",
-        "featured": true,
-        "year": "2024"
+        "featured": true
       },
       {
         "title": "E-commerce Platform",
@@ -123,8 +124,8 @@
     }
   },
   "contact": {
-    "title": "Have a project?",
-    "subtitle": "Let's work together to create something amazing",
+    "title": "Contact Me",
+    "subtitle": "Have a project? Let's talk",
     "direct": "Direct Contact",
     "follow": "Follow me",
     "send": "Send me a message",
@@ -136,7 +137,8 @@
     "prefer_whatsapp": "Prefer WhatsApp?",
     "whatsapp_description": "Click to open WhatsApp",
     "number": "Number: +53 54556198",
-    "success": "Message sent!",
+    "success": "Message sent! I'll contact you soon.",
+    "available": "Available to respond in minutes",
     "labels": {
       "email": "Email",
       "phone": "Phone",
@@ -155,7 +157,7 @@
     "and": "+"
   },
   "theme": {
-    "light": " Light Mode",
-    "dark": " Dark Mode"
+    "light": "☀️ Light Mode",
+    "dark": "🌙 Dark Mode"
   }
 }

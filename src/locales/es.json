@@ -14,7 +14,10 @@
     "cta_projects": "Ver Proyectos",
     "cta_contact": "Contactar",
     "available": "Disponible para trabajar",
-    "scroll": "SCROLL"
+    "scroll": "SCROLL",
+    "years": "Años",
+    "projects_count": "Proyectos",
+    "clients": "Clientes"
   },
   "about": {
     "title": "Sobre Mí",
@@ -72,6 +75,7 @@
     "title": "Proyectos Destacados",
     "subtitle": "Trabajos que demuestran mi capacidad técnica",
     "view": "Ver proyecto",
+    "featured": "Destacado",
     "items": [
       {
         "title": "FastShip - Plataforma de Envíos",
@@ -80,10 +84,7 @@
         "role": "Full Stack Developer - Diseñé la arquitectura, implementé el sistema de tracking en tiempo real con Socket.io y el panel administrativo.",
         "technologies": ["React", "Node.js", "MongoDB", "Tailwind", "Socket.io", "JWT"],
         "metrics": "Procesamiento de 500+ envíos diarios con actualizaciones en tiempo real.",
-        "demo": "https://fastship-sandy.vercel.app",
-        "github": "#",
-        "featured": true,
-        "year": "2024"
+        "featured": true
       },
       {
         "title": "E-commerce Platform",
@@ -123,8 +124,8 @@
     }
   },
   "contact": {
-    "title": "¿Tienes un proyecto?",
-    "subtitle": "Trabajemos juntos para crear algo increíble",
+    "title": "Contáctame",
+    "subtitle": "¿Tienes un proyecto? Hablemos",
     "direct": "Contacto Directo",
     "follow": "Sígueme en",
     "send": "Envíame un mensaje",
@@ -136,7 +137,8 @@
     "prefer_whatsapp": "¿Prefieres WhatsApp?",
     "whatsapp_description": "Haz clic para abrir WhatsApp",
     "number": "Número: +53 54556198",
-    "success": "¡Mensaje enviado!",
+    "success": "¡Mensaje enviado! Te contactaré pronto.",
+    "available": "Disponible para responder en minutos",
     "labels": {
       "email": "Email",
       "phone": "Teléfono",
@@ -155,7 +157,7 @@
     "and": "+"
   },
   "theme": {
-    "light": " Modo Claro",
-    "dark": " Modo Oscuro"
+    "light": "☀️ Modo Claro",
+    "dark": "🌙 Modo Oscuro"
   }
 }
