@@ -17,9 +17,7 @@
     "scroll": "SCROLL",
     "years": "Years",
     "projects_count": "Projects",
-    "clients": "Clients",
-    "hire_me": "Hire Me",
-    "my_works": "My Works"
+    "clients": "Clients"
   },
   "about": {
     "title": "About Me",
@@ -91,10 +89,7 @@
       {
         "title": "FastShip - Shipping Platform",
         "description": "Complete shipping management platform with real-time tracking. Includes admin panel, notifications and tracking system.",
-        "problem": "Companies need an efficient solution to manage shipments and offer real-time tracking to their customers.",
-        "role": "Full Stack Developer - Designed architecture, implemented real-time tracking system with Socket.io and admin panel.",
         "technologies": ["React", "Node.js", "MongoDB", "Tailwind", "Socket.io", "JWT"],
-        "metrics": "Processing 500+ daily shipments with real-time updates.",
         "featured": true
       },
       {
@@ -178,7 +173,7 @@
     "rights": "All rights reserved"
   },
   "theme": {
-    "light": " Light Mode",
-    "dark": " Dark Mode"
+    "light": "☀️ Light Mode",
+    "dark": "🌙 Dark Mode"
   }
 }

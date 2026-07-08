@@ -61,7 +61,9 @@ import {
   faChevronDown,
   faUserTie,
   faSearch,
-  faFilter
+  faFilter,
+  faInfoCircle,
+  faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons'
 
 // ===== ICONOS BRANDS =====
@@ -100,7 +102,8 @@ library.add(
   faGear, faLightbulb, faStar, faAward, faGraduationCap,
   faSyncAlt, faCodeBranch, faFilePdf, faClipboardList,
   faCalendar, faShippingFast, faCircleInfo, faComment,
-  faChevronDown, faUserTie, faSearch, faFilter,
+  faChevronDown, faUserTie, faSearch, faFilter,  faInfoCircle,
+  faExternalLinkAlt,
   // Brands
   faGithub, faLinkedin, faTwitter, faYoutube, faWhatsapp,
   faVuejs, faReact, faNodeJs, faPython, faDocker,

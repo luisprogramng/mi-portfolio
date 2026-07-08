@@ -17,9 +17,7 @@
     "scroll": "SCROLL",
     "years": "Años",
     "projects_count": "Proyectos",
-    "clients": "Clientes",
-    "hire_me": "Contratarme",
-    "my_works": "Mis Trabajos"
+    "clients": "Clientes"
   },
   "about": {
     "title": "Sobre Mí",
@@ -91,10 +89,7 @@
       {
         "title": "FastShip - Plataforma de Envíos",
         "description": "Plataforma completa para gestión de envíos con seguimiento en tiempo real. Incluye panel de administración, notificaciones y sistema de tracking.",
-        "problem": "Las empresas necesitan una solución eficiente para gestionar envíos y ofrecer seguimiento en tiempo real a sus clientes.",
-        "role": "Full Stack Developer - Diseñé la arquitectura, implementé el sistema de tracking en tiempo real con Socket.io y el panel administrativo.",
         "technologies": ["React", "Node.js", "MongoDB", "Tailwind", "Socket.io", "JWT"],
-        "metrics": "Procesamiento de 500+ envíos diarios con actualizaciones en tiempo real.",
         "featured": true
       },
       {
@@ -178,7 +173,7 @@
     "rights": "Todos los derechos reservados"
   },
   "theme": {
-    "light": " Modo Claro",
-    "dark": " Modo Oscuro"
+    "light": "☀️ Modo Claro",
+    "dark": "🌙 Modo Oscuro"
   }
 }
