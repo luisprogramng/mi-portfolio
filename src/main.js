@@ -13,7 +13,6 @@ import {
   faUser, 
   faBriefcase, 
   faProjectDiagram, 
-  faCogs, 
   faEnvelope,
   faArrowRight, 
   faPaperPlane, 
@@ -33,40 +32,33 @@ import {
   faArrowUp,
   faSpinner, 
   faCheckCircle, 
-  faExclamationCircle, 
   faRocket,
   faLaptopCode, 
   faBrain, 
   faUsers, 
-  faChartLine, 
   faDatabase,
   faServer, 
   faCloud, 
-  faShieldAlt, 
   faTools, 
-  faPalette,
   faGear, 
-  faLightbulb, 
   faStar, 
   faAward, 
   faGraduationCap,
-  faSyncAlt, 
-  faCodeBranch, 
   faFilePdf, 
-  faClipboardList,
   faCalendar, 
   faShippingFast, 
   faCircleInfo, 
   faComment,
   faChevronDown,
   faUserTie,
-  faSearch,
-  faFilter,
+  faFire,
   faInfoCircle,
-  faExternalLinkAlt
+  faExternalLinkAlt,
+  faArrowLeft,
+  faCogs
 } from '@fortawesome/free-solid-svg-icons'
 
-// ===== ICONOS BRANDS =====
+// ===== ICONOS BRANDS (SOLO LOS QUE EXISTEN) =====
 import { 
   faGithub, 
   faLinkedin, 
@@ -82,61 +74,95 @@ import {
   faFigma, 
   faJs, 
   faHtml5, 
-  faCss3Alt
+  faCss3Alt,
+  faAngular,
+  faJava,
+  faAws,
+  faPhp,
+  faWordpress,
+  faLaravel,
+  faSymfony,
+  faNpm,
+  faYarn,
+  faLinux,
+  faUbuntu,
+  faDebian,
+  faFedora,
+  faCentos,
+  faApple,
+  faWindows,
+  faAndroid,
+  faChrome,
+  faFirefox,
+  faSafari,
+  faEdge,
+  faSlack,
+  faDiscord,
+  faTelegram,
+  faMedium,
+  faDev,
+  faHashnode,
+  faStackOverflow,
+  faGit,
+  faGithubAlt,
+  faBitbucket,
+  faGitlab,
+  faTrello,
+  faJira
 } from '@fortawesome/free-brands-svg-icons'
 
 // ===== TRADUCCIONES =====
 import es from './locales/es.json'
 import en from './locales/en.json'
 
-// ===== AGREGAR TODOS LOS ICONOS A LA LIBRERÍA =====
+// ===== AGREGAR ICONOS A LA LIBRERÍA =====
 library.add(
   // Solid
-  faCode, faUser, faBriefcase, faProjectDiagram, faCogs, faEnvelope,
+  faCode, faUser, faBriefcase, faProjectDiagram, faEnvelope,
   faArrowRight, faPaperPlane, faCheck, faLocationDot, faPhone,
   faClock, faShoppingCart, faChartBar, faRobot, faGamepad,
   faMobileAlt, faLink, faBars, faTimes, faGlobe, faArrowUp,
-  faSpinner, faCheckCircle, faExclamationCircle, faRocket,
-  faLaptopCode, faBrain, faUsers, faChartLine, faDatabase,
-  faServer, faCloud, faShieldAlt, faTools, faPalette,
-  faGear, faLightbulb, faStar, faAward, faGraduationCap,
-  faSyncAlt, faCodeBranch, faFilePdf, faClipboardList,
-  faCalendar, faShippingFast, faCircleInfo, faComment,
-  faChevronDown, faUserTie, faSearch, faFilter,  faInfoCircle,
-  faExternalLinkAlt,
+  faSpinner, faCheckCircle, faRocket,
+  faLaptopCode, faBrain, faUsers, faDatabase,
+  faServer, faCloud, faTools, faGear, faStar, faAward, faGraduationCap,
+  faFilePdf, faCalendar, faShippingFast, faCircleInfo, faComment,
+  faChevronDown, faUserTie, faFire, faInfoCircle, faExternalLinkAlt,
+  faArrowLeft, faCogs,
+  
   // Brands
   faGithub, faLinkedin, faTwitter, faYoutube, faWhatsapp,
   faVuejs, faReact, faNodeJs, faPython, faDocker,
-  faGitAlt, faFigma, faJs, faHtml5, faCss3Alt
+  faGitAlt, faFigma, faJs, faHtml5, faCss3Alt,
+  faAngular, faJava, faAws,
+  faPhp, faWordpress, faLaravel, faSymfony,
+  faNpm, faYarn,
+  faLinux, faUbuntu, faDebian, faFedora, faCentos,
+  faApple, faWindows, faAndroid,
+  faChrome, faFirefox, faSafari, faEdge,
+  faSlack, faDiscord, faTelegram,
+  faMedium, faDev, faHashnode, faStackOverflow,
+  faGit, faGithubAlt, faBitbucket, faGitlab,
+  faTrello, faJira
 )
 
 // ===== CONFIGURAR I18N =====
 const i18n = createI18n({
   legacy: false,
-  locale: 'es', // idioma por defecto
+  locale: 'es',
   fallbackLocale: 'en',
   messages: {
     es,
     en
   },
-  globalInjection: true, // Permite usar $t en templates
+  globalInjection: true,
   warnHtmlMessage: false
 })
 
 // ===== CREAR APP =====
 const app = createApp(App)
-
-// ===== USAR PLUGINS =====
 app.use(i18n)
-
-// ===== REGISTRAR COMPONENTE FONTAWESOME =====
 app.component('font-awesome-icon', FontAwesomeIcon)
-
-// ===== MONTAR APP =====
 app.mount('#app')
 
-// ===== CONSOLA DE BIENVENIDA =====
 console.log('🚀 Portfolio de Luis Albalat')
-console.log('📦 Versión:', '1.0.0')
-console.log('🌍 Idiomas disponibles: Español 🇪🇸, English 🇬🇧')
-console.log('✨ Modo oscuro activado por defecto')
+console.log('🌍 Idiomas: Español 🇪🇸, English 🇬🇧')
