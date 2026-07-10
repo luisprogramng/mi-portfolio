@@ -8,7 +8,7 @@
 
       <div class="max-w-2xl mx-auto">
         <div class="glass-card p-6 md:p-8">
-          <!-- Información de contacto -->
+          <!-- ===== INFORMACIÓN DE CONTACTO ===== -->
           <div class="space-y-4 mb-6">
             <div class="flex items-center gap-4">
               <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -39,14 +39,14 @@
             </div>
           </div>
 
-          <!-- Botones -->
+          <!-- ===== BOTONES ===== -->
           <div class="flex flex-col gap-3">
             <a :href="'mailto:' + t('contact.values.email')" 
                class="btn-primary w-full justify-center">
               <font-awesome-icon icon="envelope" class="mr-2" />
               {{ t('contact.send_email') }}
             </a>
-            <a :href="'https://wa.me/' + t('contact.values.phone').replace('+', '') + '?text=Hola%21%20Vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo.'" 
+            <a :href="whatsappLink" 
                target="_blank"
                class="btn-whatsapp w-full justify-center">
               <font-awesome-icon :icon="['fab', 'whatsapp']" class="mr-2" />
@@ -60,7 +60,14 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
+
+const whatsappLink = computed(() => {
+  const phone = t('contact.values.phone').replace('+', '')
+  const message = encodeURIComponent('Hola! Vi tu portfolio y me gustaría hablar contigo.')
+  return `https://wa.me/${phone}?text=${message}`
+})
 </script>

@@ -135,22 +135,36 @@
   "contact": {
     "title": "Contact Me",
     "subtitle": "Have a project? Let's talk",
-    "info": "Information",
-    "send": "Send",
+    "direct": "Direct Contact",
+    "follow": "Follow me",
+    "send": "Send me a message",
+    "choose": "Choose how you prefer to contact me",
     "email": "Email",
     "whatsapp": "WhatsApp",
     "send_email": "Send Email",
     "open_whatsapp": "Open WhatsApp",
+    "prefer_whatsapp": "Prefer WhatsApp?",
+    "whatsapp_description": "Click to open WhatsApp",
+    "number": "Number: +53 54556198",
     "success": "Message sent! I'll contact you soon.",
+    "available": "Available to respond in minutes",
+    "info": "Information",
+    "send_message": "Send me a message",
+    "your_name": "Your name",
+    "your_email": "Your email",
+    "your_message": "Your message",
+    "send": "Send",
     "labels": {
       "email": "Email",
       "phone": "Phone",
-      "location": "Location"
+      "location": "Location",
+      "availability": "Availability"
     },
     "values": {
       "email": "luisprogramming2@gmail.com",
       "phone": "+53 54556198",
-      "location": "Matanzas, Cuba"
+      "location": "Matanzas, Cuba",
+      "availability": "Mon - Fri 9:00 - 18:00"
     }
   },
   "footer": {

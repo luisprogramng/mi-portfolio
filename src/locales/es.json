@@ -135,22 +135,36 @@
   "contact": {
     "title": "Contáctame",
     "subtitle": "¿Tienes un proyecto? Hablemos",
-    "info": "Información",
-    "send": "Enviar",
+    "direct": "Contacto Directo",
+    "follow": "Sígueme en",
+    "send": "Envíame un mensaje",
+    "choose": "Elige cómo prefieres contactarme",
     "email": "Email",
     "whatsapp": "WhatsApp",
     "send_email": "Enviar Email",
     "open_whatsapp": "Abrir WhatsApp",
+    "prefer_whatsapp": "¿Prefieres WhatsApp?",
+    "whatsapp_description": "Haz clic para abrir WhatsApp",
+    "number": "Número: +53 54556198",
     "success": "¡Mensaje enviado! Te contactaré pronto.",
+    "available": "Disponible para responder en minutos",
+    "info": "Información",
+    "send_message": "Envíame un mensaje",
+    "your_name": "Tu nombre",
+    "your_email": "Tu email",
+    "your_message": "Tu mensaje",
+    "send": "Enviar",
     "labels": {
       "email": "Email",
       "phone": "Teléfono",
-      "location": "Ubicación"
+      "location": "Ubicación",
+      "availability": "Disponibilidad"
     },
     "values": {
       "email": "luisprogramming2@gmail.com",
       "phone": "+53 54556198",
-      "location": "Matanzas, Cuba"
+      "location": "Matanzas, Cuba",
+      "availability": "Lun - Vie 9:00 - 18:00"
     }
   },
   "footer": {
