@@ -53,7 +53,7 @@
                target="_blank"
                class="btn-whatsapp w-full justify-center">
               <font-awesome-icon :icon="['fab', 'whatsapp']" class="mr-2" />
-              Abrir WhatsApp
+              WhatsApp
             </a>
           </div>
         </div>
