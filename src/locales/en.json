@@ -173,7 +173,7 @@
     "rights": "All rights reserved"
   },
   "theme": {
-    "light": "☀️ Light Mode",
-    "dark": "🌙 Dark Mode"
+    "light": " Light Mode",
+    "dark": " Dark Mode"
   }
 }

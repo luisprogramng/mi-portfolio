@@ -5,7 +5,7 @@
         <div class="flex items-center gap-2">
           <span class="text-primary font-bold">.Dev/</span>
           <span class="text-text-secondary text-sm">
-            © 2024 Luis Albalat — {{ t('footer.rights') }}
+            © 2026 Luis Albalat — {{ t('footer.rights') }}
           </span>
         </div>
         <div class="flex gap-6">

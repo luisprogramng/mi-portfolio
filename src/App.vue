@@ -6,7 +6,8 @@
     <Experience />
     <Projects />
     <Skills />
-    <Contact />  <!-- ✅ CONTACT ESTÁ AQUÍ -->
+    <!-- ✅ CONTACT DEBE ESTAR AQUÍ -->
+    <Contact />
     <Footer />
   </div>
 </template>
@@ -18,6 +19,7 @@ import About from './components/About.vue'
 import Experience from './components/Experience.vue'
 import Projects from './components/Projects.vue'
 import Skills from './components/Skills.vue'
-import Contact from './components/Contact.vue'  // ✅ IMPORTADO
+// ✅ IMPORTAR CONTACT
+import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 </script>

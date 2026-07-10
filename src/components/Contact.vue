@@ -1,9 +1,6 @@
 <template>
-  <section id="contacto" class="py-24 relative overflow-hidden">
-    <!-- Texto decorativo gigante -->
-    <div class="giant-text top-1/4 right-0 translate-x-1/3 select-none">CONTACT</div>
-
-    <div class="container-custom relative z-10">
+  <section id="contacto" class="py-24 relative">
+    <div class="container-custom">
       <h2 class="section-title">
         <span class="highlight">{{ t('contact.title') }}</span>
       </h2>
@@ -13,7 +10,7 @@
         <!-- ===== INFO ===== -->
         <div class="glass-card p-6 md:p-8">
           <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <font-awesome-icon icon="info-circle" class="text-primary" />
+            <font-awesome-icon icon="circle-info" class="text-primary" />
             {{ t('contact.info') }}
           </h3>
           <div class="space-y-4">

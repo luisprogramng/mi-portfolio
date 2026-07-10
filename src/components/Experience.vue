@@ -49,13 +49,13 @@ const { t, locale } = useI18n()
 const experienceItems = ref([])
 
 const defaultExperience = [
-  {
-    company: 'TechCorp Inc.',
-    position: 'Senior Frontend Developer',
-    period: '2023 - Presente',
-    description: 'Liderando el desarrollo de aplicaciones Vue.js de misión crítica para clientes enterprise.',
-    technologies: ['Vue 3', 'TypeScript', 'Tailwind', 'Pinia']
-  },
+    {
+    company: 'Freelance',
+    position: 'Web Developer',
+    period: '2020 - 2021',
+    description: 'Desarrollo de proyectos web para diversos clientes.',
+    technologies: ['Vue 2', 'Firebase', 'WordPress', 'SCSS']
+  }, 
   {
     company: 'StartupX',
     position: 'Full Stack Developer',
@@ -64,11 +64,11 @@ const defaultExperience = [
     technologies: ['React', 'Node.js', 'MongoDB', 'Docker']
   },
   {
-    company: 'Freelance',
-    position: 'Web Developer',
-    period: '2020 - 2021',
-    description: 'Desarrollo de proyectos web para diversos clientes.',
-    technologies: ['Vue 2', 'Firebase', 'WordPress', 'SCSS']
+    company: 'Compañía Creando',
+    position: 'Junior Frontend Developer',
+    period: '2023 - 2024',
+    description: 'Colaborando en el desarrollo de aplicaciones web de misión crítica para clientes importantes.',
+    technologies: ['HTML5', 'Javascript', 'Tailwind','Bootstrap 5']
   }
 ]
 

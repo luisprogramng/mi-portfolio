@@ -44,6 +44,7 @@ const skillCategories = [
     skills: [
       { name: 'Vue.js', level: 95 },
       { name: 'React', level: 85 },
+      { name: 'Angular', level: 90 },
       { name: 'TypeScript', level: 90 },
       { name: 'Tailwind CSS', level: 95 },
     ]
@@ -53,8 +54,8 @@ const skillCategories = [
     icon: 'server',
     skills: [
       { name: 'Node.js', level: 85 },
+      { name: 'Java', level: 100 },
       { name: 'Python', level: 75 },
-      { name: 'GraphQL', level: 80 },
       { name: 'PostgreSQL', level: 80 },
     ]
   },
@@ -74,7 +75,6 @@ const skillCategories = [
     skills: [
       { name: 'React Native', level: 80 },
       { name: 'Flutter', level: 65 },
-      { name: 'Firebase', level: 85 },
       { name: 'Supabase', level: 70 },
     ]
   }
