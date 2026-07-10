@@ -2,13 +2,13 @@
   <section id="contacto" class="py-16 md:py-24 relative">
     <div class="container-custom">
       <h2 class="section-title">
-        <span class="highlight">Contáctame</span>
+        <span class="highlight">{{ t('contact.title') }}</span>
       </h2>
-      <p class="section-subtitle">¿Tienes un proyecto? Hablemos</p>
+      <p class="section-subtitle">{{ t('contact.subtitle') }}</p>
 
       <div class="max-w-2xl mx-auto">
         <div class="glass-card p-6 md:p-8">
-          <!-- Información de contacto -->
+          <!-- ===== INFORMACIÓN DE CONTACTO (TEXTO FIJO) ===== -->
           <div class="space-y-4 mb-6">
             <div class="flex items-center gap-4">
               <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -39,18 +39,21 @@
             </div>
           </div>
 
-          <!-- Botones -->
+          <!-- ===== BOTONES ===== -->
           <div class="flex flex-col gap-3">
+            <!-- Botón Email (TRADUCIDO) -->
             <a href="mailto:luisprogramming2@gmail.com" 
                class="btn-primary w-full justify-center">
               <font-awesome-icon icon="envelope" class="mr-2" />
-              Enviar Email
+              {{ t('contact.send_email') }}
             </a>
+            
+            <!-- Botón WhatsApp (TEXTO FIJO) -->
             <a href="https://wa.me/5354556198?text=Hola%21%20Vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo." 
                target="_blank"
                class="btn-whatsapp w-full justify-center">
               <font-awesome-icon :icon="['fab', 'whatsapp']" class="mr-2" />
-              WhatsApp
+              Abrir WhatsApp
             </a>
           </div>
         </div>
@@ -60,6 +63,7 @@
 </template>
 
 <script setup>
-// Componente simplificado para prueba
-console.log('📞 Contact component loaded!')
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
